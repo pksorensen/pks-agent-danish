@@ -1,4 +1,7 @@
-# Gennemgang af alle blogfund
+# Python-prototypens blogfund
+
+Historisk gennemgang af `a8bf898`. Se [Rust-versionens fund](rust-blog-findings.md)
+for den aktive motor.
 
 2026-10-26. Vurderet af samme agent, som implementerede motoren. Dette er en
 gennemsigtig udviklergennemgang, ikke et uafhængigt sprogfagligt facit.

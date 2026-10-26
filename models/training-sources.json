@@ -1,0 +1,26 @@
+[
+  {
+    "file": "da_ddt-ud-train.conllu",
+    "source": "https://raw.githubusercontent.com/UniversalDependencies/UD_Danish-DDT/5880293fa36da950fa833fe0b52cb7d21882c481/da_ddt-ud-train.conllu",
+    "bytes": 5137462,
+    "sha256": "65730e35b07d1e944ee9ae1d344b5c84746cf0aeadf5faf0550059b4ded86fb6"
+  },
+  {
+    "file": "da_ddt-ud-dev.conllu",
+    "source": "https://raw.githubusercontent.com/UniversalDependencies/UD_Danish-DDT/5880293fa36da950fa833fe0b52cb7d21882c481/da_ddt-ud-dev.conllu",
+    "bytes": 660002,
+    "sha256": "d714b22776ad60fbdb6e4ffc15a5c3ffc162705617567d3cf2b09cc6b51e800a"
+  },
+  {
+    "file": "LICENSE.txt",
+    "source": "https://raw.githubusercontent.com/UniversalDependencies/UD_Danish-DDT/5880293fa36da950fa833fe0b52cb7d21882c481/LICENSE.txt",
+    "bytes": 20013,
+    "sha256": "df653272772ee86b0098bfc640b0ab583f6ecf59bb6254b82feaba3aed3ed93c"
+  },
+  {
+    "file": "README.md",
+    "source": "https://raw.githubusercontent.com/UniversalDependencies/UD_Danish-DDT/5880293fa36da950fa833fe0b52cb7d21882c481/README.md",
+    "bytes": 6684,
+    "sha256": "54afd0e605cae5e7a8494a330edacf784f500e086694c21da573e56cae7c4f35"
+  }
+]

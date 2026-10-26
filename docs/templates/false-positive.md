@@ -1,7 +1,7 @@
 # Fejlagtig advarsel
 
 - Regel-id og profil:
-- Vale-version (`3.25.1` i første version) og projektversion/commit:
+- Version fra `danish --version` og eventuelt commit:
 - Kort anonymiseret eksempelsætning:
 - Faktisk advarsel og forventet resultat:
 - Genre og målgruppe:

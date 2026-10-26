@@ -1,6 +1,6 @@
 # Regeloversigt
 
-Genereret fra `rules/*.json` med `python3 scripts/catalog.py`.
+Genereret fra `rules/*.json` med `danish catalog`.
 Redigér regelbeskrivelserne, og generér denne fil igen.
 
 Startreglerne er afgrænsede og har endnu ikke eksternt sprogfagligt review.

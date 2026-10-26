@@ -1,0 +1,56 @@
+name: Native release
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [ubuntu-22.04, macos-14]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+      - run: cargo build --release --locked -j 2
+      - run: target/release/danish setup
+      - run: cargo test --release --locked -j 2 -- --test-threads=1
+      - name: Package executable and license notices
+        shell: bash
+        run: |
+          mkdir -p dist/package/models
+          cp target/release/danish LICENSE THIRD_PARTY.md dist/package/
+          cp models/LICENSE-DDT.txt models/README.md models/DDT-README.md models/training-sources.json models/manifest.json models/training.log dist/package/models/
+          cp -R licenses dist/package/
+          platform="$(rustc -vV | sed -n 's/^host: //p')"
+          tar -C dist/package -czf "dist/danish-$platform.tar.gz" .
+          cd dist
+          shasum -a 256 danish-*.tar.gz > SHA256SUMS.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: danish-${{ matrix.os }}
+          path: |
+            dist/*.tar.gz
+            dist/SHA256SUMS.txt
+  publish:
+    if: startsWith(github.ref, 'refs/tags/')
+    needs: build
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+      - name: Publish tagged native binaries
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          cat artifacts/*/SHA256SUMS.txt > artifacts/SHA256SUMS.txt
+          gh release create "$RELEASE_TAG" artifacts/*/*.tar.gz artifacts/SHA256SUMS.txt --verify-tag --prerelease --generate-notes

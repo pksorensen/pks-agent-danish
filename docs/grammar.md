@@ -1,7 +1,7 @@
-# Grammatik og stavning i hybridmotoren
+# Grammatik og stavning i Rust-motoren
 
-Reglerne bruger spaCy `da_core_news_sm` 3.8.0 til ordklasser og
-sætningsrelationer. COR 1.5.1.0 giver mulige analyser af den faktisk skrevne
+Reglerne bruger vores egen DDT-model gennem UDPipe til ordklasser og
+sætningsrelationer. Inferens kører i et native bibliotek inde i Rust-processen. COR 1.5.1.0 giver mulige analyser af den faktisk skrevne
 ordform og bøjningsformer fra samme lemma. Modellen bruges til analyse,
 ikke til at generere omskrivninger. Der kaldes ingen ekstern sprogmodel.
 
@@ -10,11 +10,17 @@ ikke til at generere omskrivninger. Der kaldes ingen ekstern sprogmodel.
 | `Danish.FiniteVerb` | Personligt grundled + infinitiv, fx `Hun reparere cyklen` | Afstår ved hjælpeverber, tvetydigt `de` og mange usikre analyser. Finder ikke alle manglende nutids-r. |
 | `Danish.AfterModal` | Grundled + modalverbum + nutidsform | Kræver afgrænset relation; finder ikke alle ordstillinger. |
 | `Danish.PredicateAgreement` | Grundled + kopula + tillægsord | Afstår bl.a. ved passiver, masseord, præpositionsled og `klar over`/`vant til`. |
-| `Danish.ArticleGender` | Artikel direkte foran entydigt navneord | Låneord kan have en anden betydning/kønsbrug end den danske ordbogsanalyse. |
-| `Danish.AdjectiveAgreement` | Tillægsord koblet til et efterfølgende navneord | Køn, tal, bestemthed og possessiver i korte konstruktioner. Tvetydige ordformer giver huller. |
+| `Danish.ArticleGender` | Artikel direkte foran entydigt navneord i ubestemt form | Låneord kan have en anden betydning/kønsbrug end den danske ordbogsanalyse. |
+| `Danish.AdjectiveAgreement` | Tillægsord koblet til et efterfølgende navneord | Køn, tal og artikel/possessiv i korte konstruktioner. Afstår ved biords- og imperativtvetydighed samt allerede bestemte navneord. |
 | `Danish.RepeatedWord` | Gentaget funktionsord | Afstår ved nogle forskellige ordklasser; kan dermed også overse reelle dubletter. |
 | `Danish.Spelling` | Ukendt ord + snævert rettelsesforslag | Søgehjælpsdata eller intern indsættelse/sletning med fælles begyndelse/slutning. En nær stavemåde beviser ikke den tilsigtede betydning. |
 | `Danish.UnknownWord` | Ukendt ord uden tilstrækkelig evidens | Kun med `--include-uncertain`; har niveau `suggestion`, ikke `warning`. |
+
+En entydig COR-ordklasse kan støtte analysen, når modellen fejlklassificerer
+et navneord. Det kræver stadig en afgrænset relation eller et kort, tydeligt
+sætningsmønster. Biord som `bare` og `stadig`, pronominer som `alle`,
+forkortelser som `pr.` og dele af `C#`/`e2e` behandles ikke som almindelige
+navneordsled. Tvetydige biord efter udsagnsord kan føre til, at reglen afstår.
 
 Kilde til bøjningsdata: [Det Centrale Ordregister](https://ordregister.dk/).
 Normlagene N og K anvendes. [COR.SOEGEHJAELP](https://ordregister.dk/doc/COR.SOEGEHJAELP.html)
@@ -29,13 +35,14 @@ Beskeder er forslag, og flere fund kan kræve en samlet rettelse: ved
 
 ## Kendte huller
 
-`Hun gav et ærlig svar` overses: `svar` har flere ordklasser og både ental
-og flertal i COR. Der er ingen fuld kommakontrol, ordstillingskontrol,
+`Hun gav et ærlig svar` findes nu: en tilknyttet artikel hjælper med at
+afklare `svar`, som har flere ordklasser og både ental og flertal i COR.
+Der er fortsat ingen fuld kommakontrol, ordstillingskontrol,
 kontrol af sammensatte ord eller semantisk vurdering af oversættelsesdansk.
 Korrekte sætninger med fremmedord kan fejlmarkeres. Titler, citater og
 ufuldstændige sætninger kan give analysefejl. Store begyndelsesbogstaver
 udelukkes fra den generelle staveheuristik for at skåne egennavne; det
-koster dækning. De præcise Vale-staveregler er fortsat case-insensitive.
+koster dækning. De præcise YAML-staveregler er fortsat case-insensitive.
 
 ## Tilføj en grammatikregel
 
@@ -44,13 +51,13 @@ koster dækning. De præcise Vale-staveregler er fortsat case-insensitive.
 2. Tilføj fejl og korrekte modeksempler i `tests/quality.json`: regel-id,
    præcis markeret ordform og forventet rettelsesforslag. Brug egne eller
    licensafklarede eksempler. Samme emne og ordforråd skal optræde i begge grupper.
-3. Implementér i `checker.py` med COR-analyser og relevante syntaksrelationer.
+3. Implementér i `src/checker.rs` med COR-analyser og relevante syntaksrelationer.
    Brug `emit` til diagnostik og kildepositioner. Brug aldrig en filsti eller
    blogtitel som en betingelse for en sproglig regel.
-4. Registrér regel-id i `RULES`, udvid tabellen her og kør regressionstestene.
-   Nye grammatikregler er endnu Python-kode; YAML alene kan ikke udtrykke
+4. Registrér regel-id i `CORE`, udvid tabellen her og kør regressionstestene.
+   Nye grammatikregler er endnu Rust-kode; YAML alene kan ikke udtrykke
    den nødvendige syntaks. Dette er en større bidragsopgave end en stilregel.
-5. Kør `scripts/evaluate.py` og gennemgå samtlige ændrede advarsler, også
+5. Kør `danish evaluate` og gennemgå samtlige ændrede advarsler, også
    fjernede fund. Et højere antal fund er ikke i sig selv en forbedring.
 6. Indsend kilder, undtagelser, positive/negative eksempler og fundændringen
    til sprogfagligt og teknisk review. En regel bliver ikke stabil alene
@@ -58,3 +65,14 @@ koster dækning. De præcise Vale-staveregler er fortsat case-insensitive.
 
 En bruger skal kunne foreslå en regel ved kun at indsende en sætning og en
 forklaring. Vedligeholderne omsætter bidraget til kode, test og dokumentation.
+
+Du kan inspicere analysen, når du arbejder på en regel:
+
+```sh
+cargo run --release --example grammar -- models/danish-ddt.udpipe 'Modellerne er dygtig.'
+cargo run --release --example lexicon -- plejedede utrodeligt
+```
+
+Det første eksempel viser token-id, ordform, ordklasse, hoved-id og relation.
+Det andet viser ordbogsaccept og nære COR-kandidater; kandidaterne er ikke i
+sig selv advarsler. Kør `danish setup` før ordbogseksemplet.

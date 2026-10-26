@@ -1,0 +1,13 @@
+{
+  "file": "danish-ddt.udpipe",
+  "bytes": 7762948,
+  "sha256": "a2e5e509e4717545a9b211e35c63671dbf16677ddde7e78800c3f6c3f885ccda",
+  "trained_utc": "2026-10-26",
+  "udpipe_rs": "0.2.0",
+  "corpus_commit": "5880293fa36da950fa833fe0b52cb7d21882c481",
+  "chosen_tagger_iteration": 12,
+  "chosen_parser_iteration": 10,
+  "development_uas": 77.24,
+  "development_las": 73.17,
+  "note": "Development parser scores, not linter accuracy or an independent test result."
+}

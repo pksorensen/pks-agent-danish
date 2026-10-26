@@ -3,10 +3,11 @@
 ![Dansk, med omtanke. Tre danske sætninger får markeret bøjningsfejl og vist rettelsesforslag.](docs/assets/danish-lint.gif)
 
 [![Tests](https://github.com/pksorensen/pks-agent-danish/actions/workflows/test.yml/badge.svg)](https://github.com/pksorensen/pks-agent-danish/actions/workflows/test.yml)
+[![Rust](https://img.shields.io/badge/built_with-Rust-dea584)](Cargo.toml)
 [![Status: alpha](https://img.shields.io/badge/status-alpha-8b5cf6)](#hvor-god-er-den)
 [![License: MIT](https://img.shields.io/badge/code-MIT-168367)](LICENSE)
 
-**En lokal linter til dansk tekst. Forklarlige forslag — og plads til din stemme.**
+**En lokal dansk tekstlinter i Rust. Forklarlige forslag — og plads til din stemme.**
 
 Finder udvalgte stave- og grammatikfejl i Markdown og ren tekst. Kører på
 din computer, sender ikke teksten til en tjeneste og ændrer ingen filer.
@@ -20,30 +21,34 @@ Prøv den på en tekst, du kender, og [fortæl os, om den var nyttig](https://gi
 
 ## Prøv den
 
-Kræver **Python 3.12** og det native Hunspell-bibliotek. Linux er afprøvet;
-macOS-installation er beskrevet, men endnu ikke verificeret. På Windows kan WSL bruges.
+Installér fra kildekode med Rust/Cargo og en C++-compiler (`build-essential`
+på Ubuntu, Xcode Command Line Tools på macOS):
 
 ```sh
-git clone https://github.com/pksorensen/pks-agent-danish.git
-cd pks-agent-danish
-
-# Ubuntu/Debian:
-sudo apt-get install libhunspell-1.7-0
-# macOS: brew install hunspell
-
-python3.12 scripts/setup.py
-bin/danish lint din-tekst.md
+cargo install --git https://github.com/pksorensen/pks-agent-danish --locked
+# Hent de fastlåste ordbøger og COR én gang:
+danish setup
+danish lint din-tekst.md
 ```
 
-Setup opretter et isoleret miljø og henter fastlåste sprogdata, model og
-værktøjer. Første installation kræver netværk; selve tekstkontrollen gør ikke.
-Data ligger under `data/pks-agent-danish/` i et selvstændigt checkout.
-Systemets Python og PATH ændres ikke.
+[Native udgivelser](https://github.com/pksorensen/pks-agent-danish/releases)
+bygges til Linux og macOS. Windows kan bruge WSL.
+
+CLI, tekstbehandling, grammatikregler, stavning, YAML-regler, installation
+og evaluering kører i Rust. **Ingen Python, spaCy, Vale-proces eller
+separat Hunspell-installation er nødvendig.** UDPipes C++-bibliotek og vores
+DDT-model er indbygget til sætningsanalysen; dette er ikke en påstand om,
+at alle tredjepartsafhængigheder er skrevet i Rust.
+
+`danish setup` kræver netværk og henter ordbøger/bøjningsdata med SHA-256-kontrol.
+Derefter kører lint offline. Data placeres i operativsystemets lokale
+applikationsdatamappe. Vælg en anden mappe med `--resources` eller
+`PKS_DANISH_RESOURCES`; ingen tekst uploades.
 
 Prøv uden at oprette en fil:
 
 ```sh
-bin/danish lint - <<'TEXT'
+danish lint - <<'TEXT'
 Modellerne er dygtig. Det er et workshop.
 TEXT
 ```
@@ -66,35 +71,36 @@ Animationen illustrerer forslagene. Produktet er en CLI og har ikke en grafisk e
 | Hun **reparere** cyklen. | reparerer |
 | Han **plejedede** at komme. | plejede |
 
-Motoren kombinerer Stavekontrolden/Hunspell, Dansk Sprognævns COR,
-spaCys danske sætningsanalyse og Vale. Reglerne undersøger afgrænsede
-konstruktioner. Der er endnu ingen fuld kommakontrol eller forståelse af
-hele tekstens betydning. Stil- og terminologipakker er tilvalg.
+Motoren kombinerer Stavekontroldens ordbog via Rust-biblioteket Spellbook,
+Dansk Sprognævns COR og en model trænet på det åbne danske DDT-korpus.
+Reglerne undersøger afgrænsede konstruktioner. Der er endnu ingen fuld
+kommakontrol eller forståelse af hele tekstens betydning. Stil- og
+terminologipakker er tilvalg.
 
 ```sh
-bin/danish lint --format json artikel.md
-bin/danish lint --checks grammar artikel.md
-bin/danish lint --profile klart-sprog artikel.md
-bin/danish lint --dictionary vocabularies/development.txt artikel.md
-bin/danish explain Danish.PredicateAgreement
+danish lint --format json artikel.md
+danish lint --checks grammar artikel.md
+danish lint --profile klart-sprog artikel.md
+danish lint --dictionary vocabularies/development.txt artikel.md
+danish explain Danish.PredicateAgreement
 ```
 
-[CLI, profiler og undtagelser](docs/usage.md) · [Grammatikregler](docs/grammar.md) · [Vale-regelkatalog](docs/rules.md)
+[CLI, profiler og undtagelser](docs/usage.md) · [Grammatikregler](docs/grammar.md) · [Regelkatalog](docs/rules.md)
 
 ## Hvor god er den?
 
-På **179 blogindlæg** gav prototypen **72 advarsler**. Udviklerens gennemgang:
-50 nyttige lokale rettelser, 2 delrettelser, 18 uafklarede fund og 2 forkerte
-rettelsesforslag. Ingen særlig ordliste blev brugt til denne kørsel.
+Alle **84 regeleksempler og 61 kvalitetseksempler består** i Rust-versionen.
+På 180 blogindlæg fandt den 83 advarsler. Den bevarer alle 24 stavefund og
+49 af de 50 tidligere vurderede nyttige fund fra Python-prototypen.
 
-Det er **ikke et uafhængigt benchmark**: Bloggen blev brugt under udviklingen,
-og vurderingen er lavet af samme AI-agent, som implementerede reglerne.
+Udviklerens gennemgang vurderer 56 fund som nyttige, 6 som delvise,
+20 til videre sprogfaglig vurdering og 1 som forkert. Det er en åben
+udviklergennemgang, ikke et uafhængigt mål for dansk korrekthed.
+
+[Evaluering af Rust-porteringen](docs/rust-migration.md) · [Python-prototypens evaluering](docs/evaluation.md)
+
+Testmaterialet er brugt under udviklingen og er ikke et uafhængigt benchmark.
 Dækningen af samtlige fejl er ikke målt. Tekniske låneord er en kendt fejlkilde.
-
-De medfølgende 61 kvalitetseksempler har 60 forventede udfald. Den kendte
-mangel — `Hun gav et ærlig svar` — er bevaret som en forventet fejl i testene.
-
-[Hele evalueringen](docs/evaluation.md) · [Alle 72 fund og vurderinger](docs/blog-findings.md)
 
 ## Byg bedre dansk sammen med os
 
@@ -107,18 +113,21 @@ Du behøver ikke kunne kode for at hjælpe:
 Issues er offentlige, så brug korte, anonymiserede eksempler. Vi søger især
 sprogfaglige reviewers og folk, der skriver andre typer tekster end tekniske blogs.
 
-Simple mønstre kan bidrages i YAML; grammatikregler bruger Python og sproglige
+Simple mønstre kan bidrages i YAML; grammatikregler bruger Rust og sproglige
 analyser. Hver regel skal have en kilde, fejl, korrekte modeksempler og kendte
 undtagelser. Se [bidragsvejledningen](CONTRIBUTING.md).
 
 ```sh
-bin/danish rule new Experimental.MinRegel
-python3 scripts/test.py
-python3 scripts/catalog.py --check
+cargo build --locked
+target/debug/danish setup
+cargo test --locked -- --test-threads=1
+target/debug/danish catalog --check
 ```
 
 ## Licens og inspiration
 
 Inspireret af [english-rs](https://github.com/Aaryan-Kapoor/english-rs).
 Kode, selvstændige regler og animation er [MIT-licenseret](LICENSE).
-Ordbøger, analysemodel og skrifttype har egne licenser — se [THIRD_PARTY.md](THIRD_PARTY.md).
+Ordbøger, analysemodel, native biblioteker og skrifttype har egne licenser —
+se [THIRD_PARTY.md](THIRD_PARTY.md). Den medfølgende model er CC BY-SA 4.0 og
+kan også bruges kommercielt under licensens vilkår.

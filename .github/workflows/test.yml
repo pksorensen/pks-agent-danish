@@ -1,32 +1,35 @@
 name: Tests
-
 on:
   push:
     branches: [main]
   pull_request:
   workflow_dispatch:
-
 permissions:
   contents: read
-
 jobs:
   test:
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
+    runs-on: ubuntu-22.04
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: dtolnay/rust-toolchain@stable
         with:
-          python-version: '3.12'
-      - name: Install Hunspell
-        run: sudo apt-get update && sudo apt-get install -y libhunspell-1.7-0
-      - name: Install pinned runtime, model and dictionaries
-        run: python3 scripts/setup.py
-      - name: Check rules, grammar, source positions and CLI
-        run: python3 scripts/test.py
-      - name: Check generated rule documentation
-        run: python3 scripts/catalog.py --check
-      - name: Smoke-test the public entry point
+          components: rustfmt, clippy
+      - uses: Swatinem/rust-cache@v2
+      - name: Formatting
+        run: cargo fmt --all -- --check
+      - name: Build native executable
+        run: cargo build --locked -j 2
+      - name: Install pinned dictionaries and COR
+        run: target/debug/danish setup
+      - name: Lint Rust
+        run: cargo clippy --locked -j 2 --all-targets -- -D warnings
+      - name: Rule examples, grammar, offsets, profiles and CLI
+        run: cargo test --locked -j 2 -- --test-threads=1
+      - name: Generated documentation
+        run: target/debug/danish catalog --check
+      - name: Verify independent runtime
         run: |
-          bin/danish lint --format json tests/corpus/everyday.md
-          bin/danish explain Danish.PredicateAgreement
+          mkdir -p data/isolated
+          cp target/debug/danish data/isolated/
+          printf 'Modellerne er dygtig.\n' | env PATH=/nonexistent data/isolated/danish lint - --format json

@@ -1,0 +1,4 @@
+/licenses/dependencies.md linguist-generated=true
+/models/*.udpipe binary
+/models/training.log linguist-generated=true
+/models/DDT-README.md linguist-vendored=true

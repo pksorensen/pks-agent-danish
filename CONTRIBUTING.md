@@ -22,10 +22,10 @@ Det er en øvelse i bidragsprocessen, ikke en påstand om, at frasen er forkert.
 2. **Opret filerne.** Kør fra projektmappen:
 
    ```sh
-   python3 danish.py rule new Experimental.IFlesteTilfaelde
+   danish rule new Experimental.IFlesteTilfaelde --root mine-regler
    ```
 
-3. **Skriv mønstret** i `styles/Experimental/IFlesteTilfaelde.yml`:
+3. **Skriv mønstret** i `mine-regler/styles/Experimental/IFlesteTilfaelde.yml`:
 
    ```yaml
    extends: existence
@@ -36,12 +36,13 @@ Det er en øvelse i bidragsprocessen, ikke en påstand om, at frasen er forkert.
      - 'i langt de fleste tilfælde'
    ```
 
-   Brug Vales eksisterende [regeltyper](https://docs.vale.sh/checks/existence).
+   Motoren understøtter `existence` og `substitution` fra
+   [Vale-formatet](https://docs.vale.sh/checks/existence); øvrige felter afvises.
    `existence` passer til et forsigtigt stilforslag; `substitution` kan bruges
    til en entydig, dokumenteret stavemåde. Undgå regex, der kan ramme store
    dele af et dokument. Kontroller store bogstaver, æ/ø/å og ordgrænser.
 
-4. **Udfyld regelbeskrivelsen** i `rules/Experimental.IFlesteTilfaelde.json`.
+4. **Udfyld regelbeskrivelsen** i `mine-regler/rules/Experimental.IFlesteTilfaelde.json`.
    Behold `id`, sæt `category` til `style` og `status` til `experimental`.
    Beskriv formål, begrænsninger og genre i `summary` og `explanation`.
    Angiv en reel kilde eller en begrundet stilbeslutning i en lokal Markdown-fil
@@ -68,13 +69,16 @@ Det er en øvelse i bidragsprocessen, ikke en påstand om, at frasen er forkert.
 6. **Kør den rigtige motor og testene:**
 
    ```sh
-   bin/danish lint --profile experimental min-tekst.md
-   python3 tests/test_rules.py
-   python3 scripts/catalog.py
-   python3 scripts/catalog.py --check
+   danish lint --profile experimental --rules-dir mine-regler min-tekst.md
+   danish --rules-dir mine-regler rule test
+   cargo test --locked
+   target/debug/danish catalog
+   target/debug/danish catalog --check
    ```
 
-   Testene opdager nye regelpar automatisk. De sammenligner fund, alvor og
+   `rule test` tester også eksemplerne i din eksterne pakke. Flyt det færdige
+   regelpar til projektets `styles/` og `rules/` i din PR, så Cargo-testene
+   og kataloget medtager det ved næste build. Testene opdager nye regelpar automatisk. De sammenligner fund, alvor og
    placering i originalteksten. Korpusfund vises pr. profil og fil. Hvis en
    korpusforventning ændres, skal hvert nyt eller fjernet fund forklares.
 
@@ -101,8 +105,8 @@ Bidrag til kode, regler, dokumentation og testmateriale gives under projektets
 
 ## Review og udgivelser
 
-Nye Vale-regler starter i `Experimental`, som aldrig indgår i standardprofilen.
-Hybridmotorens nuværende grammatikregler er en særskilt prototype: de er
+Nye YAML-regler starter i `Experimental`, som aldrig indgår i standardprofilen.
+Rust-motorens nuværende grammatikregler er en særskilt prototype: de er
 aktive som standard under afprøvningen, men er ikke stabile eller eksternt
 godkendte. Fremtidige standardregler kræver samme review som beskrevet her.
 Før en regel flyttes til en normal pakke, skal både en sprogfaglig og en
@@ -128,15 +132,15 @@ Denne version tilbyder forklaringer og forslag, men skriver aldrig i teksten.
 
 Se [grammatikvejledningen](docs/grammar.md) for arbejde med COR, ordklasser
 og syntaks. `tests/quality.json` rummer både fejl og korrekt dansk.
-`tests/test_checker.py` kontrollerer desuden Markdown, kildepositioner,
-ordlister, undtagelser og den samlede CLI. Kør med det installerede miljø:
+`tests/rust_contract.rs` kontrollerer desuden Markdown, kildepositioner,
+ordlister, undtagelser og den samlede CLI. Kør med lokale sprogdata installeret (`danish setup`):
 
 ```sh
-python3 scripts/test.py
+cargo test --locked -- --test-threads=1
 ```
 
 Bidrag kan starte på tre niveauer: en anonymiseret sætning uden kode,
-en enkel YAML-regel eller en syntaktisk Python-regel. Vedligeholderne har
+en enkel YAML-regel eller en syntaktisk Rust-regel. Vedligeholderne har
 ansvar for at omsætte sproglige observationer til reproducerbare tests.
 Det skal ikke være nødvendigt at kunne programmere for at forbedre sproget.
 

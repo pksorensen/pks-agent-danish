@@ -1,0 +1,36 @@
+[package]
+name = "pks-agent-danish"
+version = "0.2.0-alpha.1"
+edition = "2024"
+rust-version = "1.85"
+description = "Local Danish prose linting with explainable grammar and spelling diagnostics"
+license = "MIT"
+repository = "https://github.com/pksorensen/pks-agent-danish"
+
+[[bin]]
+name = "danish"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+serde_yaml = "0.9"
+regex = "1"
+fancy-regex = "0.16"
+sha2 = "0.10"
+ureq = "3"
+spellbook = "0.4.2"
+udpipe-rs = "0.2"
+include_dir = "0.7"
+directories = "6"
+
+[dev-dependencies]
+tempfile = "3"
+
+[profile.release]
+strip = true
+
+[lints.rust]
+unsafe_code = "forbid"

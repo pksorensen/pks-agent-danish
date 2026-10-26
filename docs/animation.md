@@ -16,18 +16,15 @@ automatisk rettelse af brugerens filer.
 
 ## Genskab animationen
 
-Valgfrie designværktøjer, ikke en del af linterens runtime:
+Lottie JSON er animationens vektorkilde og kan redigeres i en Lottie-editor.
+Den oprindelige Python-generator findes i historikken ved commit `a8bf898`;
+Python indgår ikke længere i projektet. Render GIF/poster fra JSON med de
+valgfrie JavaScript-værktøjer (ikke linterens runtime):
 
 ```sh
-python3 -m venv data/animation-python
-data/animation-python/bin/pip install fonttools==4.63.0
-data/animation-python/bin/python scripts/build_animation.py
-
 npm install --prefix data/animation-tools --no-save --package-lock=false \
   playwright@1.58.2 lottie-web@5.13.0
-# Installer Chromium via Playwright, hvis du ikke allerede har den:
 node data/animation-tools/node_modules/playwright/cli.js install chromium
-
 NODE_PATH="$PWD/data/animation-tools/node_modules" \
   node scripts/render_animation.cjs data/animation-render
 ```
@@ -37,7 +34,7 @@ angives som det næste argument efter outputmappen. Mellemvideo og enkelte
 kontrolbilleder gemmes under `data/`; der skrives ikke hundredvis af frames
 på disk. GIF og poster gemmes under `docs/assets/`.
 
-Design og generator er selvstændigt skrevet til projektet og MIT-licenseret.
+Design og render-script er selvstændigt skrevet til projektet og MIT-licenseret.
 Geist-fonten er SIL OFL 1.1; licens og forfattere følger med i
 [fonts/](assets/fonts/). lottie-web og Playwright installeres særskilt og
 følger ikke med repositoryet.

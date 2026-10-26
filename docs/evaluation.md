@@ -1,4 +1,7 @@
-# Andet forsøg: konkret vurdering af dansk-linteren
+# Python-prototypens evaluering (historisk)
+
+Denne rapport gælder Python-alphaen på commit `a8bf898`, før Rust-porteringen.
+Kommandoer og testtal nedenfor er historiske; brug [Rust-evalueringen](rust-migration.md) for den aktuelle version.
 
 **Vurdering, 2026-10-26:** Fortsæt som en afgrænset dansk korrekturassistent.
 Prototypen giver nu nyttige fund på rigtige tekster. Den er endnu ikke klar

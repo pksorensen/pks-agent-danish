@@ -1,72 +1,73 @@
-# Tredjepartsnoter
+# Licenser og kilder
 
-## Vale 3.25.1
+Projektets egen Rust-kode, regler og dokumentation er MIT. Ordbøger,
+modeller og afhængigheder har egne licenser. De skal bevares ved distribution.
+`Cargo.lock` fastlåser kildeversioner; `resources.lock.json` fastlåser
+sprogdata med downloadadresse, størrelse og SHA-256.
 
-Installeres særskilt af `scripts/install_vale.py`. Arkivernes SHA-256 er
-fastlåst i scriptet. Binæren og arkiverne indgår ikke i projektets kildekode.
+## Indbygget analysemodel
 
-- Kilde og udgivelse: https://github.com/vale-cli/vale/releases/tag/v3.25.1
-- Licens: MIT, https://github.com/vale-cli/vale/blob/v3.25.1/LICENSE
+Vores `models/danish-ddt.udpipe` er trænet på UD Danish DDT ved commit
+`5880293fa36da950fa833fe0b52cb7d21882c481`. Model og træningsmateriale er
+**CC BY-SA 4.0**. Modellen er en selvstændig træningsadaptation fra dette
+projekt; der er ikke anvendt en prætrænet model med NC-begrænsning.
+Se [modelkort og attribution](models/README.md) og
+[licensteksten](models/LICENSE-DDT.txt). Disse medfølger native udgivelser.
+Modellen må ikke ommærkes som MIT.
 
-Ved eventuel distribution af Vale sammen med projektet skal Vales
-licensmeddelelse og relevante tredjepartsmeddelelser medfølge.
+## Native biblioteker
 
-## Sproglige kilder og inspiration
+- **UDPipe**, UFAL / Charles University, **MPL 2.0**, via `udpipe-rs` 0.2.0
+  (MIT/Apache-2.0). Det oprindelige C++-bibliotek indbygges statisk;
+  projektet har ikke ændret bibliotekets kildekode. Kildepakken kan hentes på
+  https://crates.io/crates/udpipe-rs/0.2.0 .
+  Licensmeddelelser findes under `licenses/` og i kildepakkens `vendor/udpipe/`.
+- **Spellbook 0.4.2**, **MPL 2.0**, en Rust-implementering af Hunspell-formatet:
+  https://crates.io/crates/spellbook/0.4.2 . Bibliotekets kildekode er uændret.
+  Adapteren normaliserer numeriske flag/litterale skråstreger ved indlæsning
+  af Stavekontroldens data; de downloadede originalfiler ændres ikke.
+- Øvrige Rust-afhængigheder følger deres individuelle MIT, Apache, BSD
+  eller kompatible licenser. Præcise versioner står i `Cargo.lock`;
+  [licensmeddelelser fra kildepakkerne](licenses/dependencies.md) medfølger
+  release-arkiverne. Opdatér samlingen, når afhængigheder ændres.
 
-Retskrivningsordbogen henvises til som normkilde. Regelbeskrivelser og
-testtekster er skrevet selvstændigt til projektet. De downloadede sprogresurser
-er beskrevet nedenfor.
+MPL-kildetekst for indbyggede biblioteker er tilgængelig gennem de angivne
+kildepakker og versioner. Release-arkiver indeholder licensmeddelelserne.
+Der følger hverken Python, spaCy, en Vale-binær eller et separat Hunspell-
+bibliotek med Rust-versionen.
 
-english-rs er inspiration til grænsefladen og tilgangen. Der er ikke kopieret
-kode derfra. LanguageTool nævnes som en mulig fremtidig sammenligning;
-ingen LanguageTool-kode eller regler indgår.
+## Sprogdata hentet af `danish setup`
 
-## Sprogdata og model — tilføjet i anden prototype
-
-Den aktuelle installation henter følgende særskilte data.
-De er **ikke** omfattet af projektets MIT-licens.
-
-- **COR 1.5.1.0 og COR.SOEGEHJAELP 1.0**, Dansk Sprognævn:
-  [ordregister.dk](https://ordregister.dk/) og
-  [søgehjælpsdokumentation](https://ordregister.dk/doc/COR.SOEGEHJAELP.html).
-  Udgivet under CC0. Originaldata opbevares uændret; motoren filtrerer normlag
-  og slår bøjningsformer op under kørsel.
-- **Stavekontrolden 2.9.101 (2026-06-07)**, © 2020 Foreningen for frit
-  tilgængelige sprogværktøjer. Bygger på data fra Det Danske Sprog- og
-  Litteraturselskab. Upstream tilbyder GPL 2.0, LGPL 2.1 og MPL 1.1.
-  `README_da_DK.txt` følger med download. Der hentes kun Hunspell-filer,
-  ikke synonymordbogen.
+- **COR 1.5.1.0 og COR.SOEGEHJAELP 1.0**, Dansk Sprognævn, **CC0**:
+  https://ordregister.dk/ og https://ordregister.dk/doc/COR.SOEGEHJAELP.html .
+  Kun normlag N og K anvendes. Søgehjælp er ikke et facit for rettelser.
+- **Stavekontrolden 2.9.101 (2026-06-07)**, Foreningen for frit tilgængelige
+  sprogværktøjer, baseret på data fra Det Danske Sprog- og Litteraturselskab.
+  Upstream tilbyder **GPL 2.0 / LGPL 2.1 / MPL 1.1**.
+  `README_da_DK.txt` og licensmeddelelser i `.aff` medfølger download.
+  Dette projekt distribuerer ikke ordbøgerne som MIT.
 - **SCOWL en_US 2020.12.07**, engelsk hjælpeordbog fra LibreOffice dictionaries.
-  De forskellige komponenters ophavsret og tilladelser står i de downloadede
-  `README_en_US.txt` og `license.txt`; bevar begge ved distribution.
-- **spaCy 3.8.7**, Explosion, MIT. **da_core_news_sm 3.8.0**, Explosion,
-  [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
-  Modellen bruges uændret og installeres særskilt som Python-pakke.
-  Kilde: https://github.com/explosion/spacy-models/releases/tag/da_core_news_sm-3.8.0
-  Modellens metadata krediterer UD Danish DDT v2.8 (Anders Johannsen,
-  Héctor Martínez Alonso, Barbara Plank) og DaNE (Rasmus Hvingelby,
-  Amalie B. Pauli, Maria Barrett, Christina Rosted, Lasse M. Lidegaard,
-  Anders Søgaard), begge CC BY-SA 4.0. NER er deaktiveret i linteren.
-- **Hunspell**, systemets delte bibliotek. Projektet bruger det gennem ctypes
-  og distribuerer ikke biblioteket. Upstream tilbyder GPL/LGPL/MPL;
-  se https://github.com/hunspell/hunspell for versionens licensvilkår.
+  Licenser og ophavsret til delkomponenterne står i de downloadede
+  `README_en_US.txt` og `license.txt`. Bevar begge ved distribution.
 
-Ordbøgerne er fastlåst til LibreOffice dictionaries commit
-`cdaeab266e35c0f1ce367629c7f2079c64fe9351`. Præcise downloadadresser,
-størrelser og SHA-256 fremgår af `resources.lock.json`.
-Python-afhængigheder er fastlåst i `requirements.lock`; deres egne
-licensmeddelelser følger pakkerne. Ved samlet distribution skal de relevante
-licenser og meddelelser følge med; modellen må ikke ommærkes som MIT.
+Ordbøgerne hentes fra LibreOffice dictionaries commit
+`cdaeab266e35c0f1ce367629c7f2079c64fe9351`. Se lockfilen for hver fil.
 
-## README-animation
+## Animation og skrifttype
 
-Animation og generator er selvstændigt skrevet til projektet. De bruger
-**Geist**, Copyright 2024 The Geist Project Authors, under **SIL Open Font
-License 1.1**. Den medfølgende font er ikke ændret; animationens bogstaver
-er eksporteret som vektorkonturer. Font, `OFL.txt` og `AUTHORS.txt` ligger
-under `docs/assets/fonts/`. Kilde: https://github.com/vercel/geist-font
+Lottie-animation og render-script er selvstændigt skrevet og MIT-licenseret.
+**Geist**, Copyright 2024 The Geist Project Authors, er **SIL OFL 1.1**.
+Font, licens og forfatterliste ligger under `docs/assets/fonts/`. Fonten er
+uændret; Lottie-filen bruger eksporterede bogstavkonturer.
+https://github.com/vercel/geist-font
 
-Den valgfrie renderproces bruger **lottie-web 5.13.0** (MIT), **Playwright
-1.58.2** (Apache-2.0) og **fonttools 4.63.0** (MIT). De installeres separat
-og distribueres ikke som en del af dette repository. FFmpeg leveres af
-brugerens system. GIF'en er renderet fra den medfølgende Lottie JSON.
+De valgfrie render-værktøjer er **lottie-web 5.13.0** (MIT) og **Playwright
+1.58.2** (Apache-2.0); de installeres separat. FFmpeg leveres af systemet.
+De er ikke afhængigheder for kompilering eller brug af dansk-linteren.
+
+## Inspiration og tidligere prototype
+
+[english-rs](https://github.com/Aaryan-Kapoor/english-rs) er inspiration;
+ingen kode derfra er kopieret. YAML-reglerne bruger en afgrænset del af
+Vale-formatet, men udføres nu i Rust. Den tidligere Python/spaCy/Vale-version
+og dens særskilte licensnoter findes i historikken på commit `a8bf898`.

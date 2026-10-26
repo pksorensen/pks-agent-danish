@@ -1,0 +1,3711 @@
+{
+  "scope": "Rust 0.2.0-alpha.1, dansk profile, no custom dictionary. 180 files scanned; the 179 unchanged Python-baseline files are listed. One extra file had no warnings.",
+  "reviewer": "Codex, same agent that implemented the rules. Development review, not independent linguistic annotation. New guards were developed using this corpus.",
+  "model": {
+    "file": "danish-ddt.udpipe",
+    "bytes": 7762948,
+    "sha256": "a2e5e509e4717545a9b211e35c63671dbf16677ddde7e78800c3f6c3f885ccda",
+    "trained_utc": "2026-10-26",
+    "udpipe_rs": "0.2.0",
+    "corpus_commit": "5880293fa36da950fa833fe0b52cb7d21882c481",
+    "chosen_tagger_iteration": 12,
+    "chosen_parser_iteration": 10,
+    "development_uas": 77.24,
+    "development_las": 73.17,
+    "note": "Development parser scores, not linter accuracy or an independent test result."
+  },
+  "summary": {
+    "by_rule": {
+      "Danish.AdjectiveAgreement": 33,
+      "Danish.AfterModal": 1,
+      "Danish.ArticleGender": 21,
+      "Danish.PredicateAgreement": 3,
+      "Danish.RepeatedWord": 1,
+      "Danish.Spelling": 24,
+      "Danish.UnknownWord": 1083
+    },
+    "engine": "rust-udpipe-spellbook",
+    "files": 180,
+    "quality_cases": 61,
+    "quality_passed": 61,
+    "seconds": 90.518087017,
+    "source_unchanged": true,
+    "version": "0.2.0-alpha.1",
+    "warnings": 83
+  },
+  "review_counts": {
+    "useful": 56,
+    "needs_review": 20,
+    "partial": 6,
+    "wrong": 1
+  },
+  "comparison": {
+    "python_warnings": 72,
+    "retained": 69,
+    "new": 14,
+    "lost": 3,
+    "retained_useful": 49,
+    "previous_useful": 50
+  },
+  "files": [
+    {
+      "file": "blog-posts/100-prompts-lessons/da.md",
+      "sha256": "02030833e54eb5e9a8da4ba5a05d88c970690717cdddf403871c5e10e7b781cc"
+    },
+    {
+      "file": "blog-posts/1000-prompts/da.md",
+      "sha256": "b92534b95b257340a6bff72b151b31392830435c746eba3bd3d8d5c9186a7542"
+    },
+    {
+      "file": "blog-posts/1000-prompts-96-days/da.md",
+      "sha256": "6e9965a0f3c2fc5ebd70edc7b0ca5a8a1f6aea1392505ac6803bcef6b4421227"
+    },
+    {
+      "file": "blog-posts/10x-developers-1000x/da.md",
+      "sha256": "ad8c1a8bf4675fe6e74dbb112ca66410cd3bb9b7173ff4128c2123f93f767946"
+    },
+    {
+      "file": "blog-posts/300-sessions-and-counting/da.md",
+      "sha256": "1011060b88bd38c4d3f492dd47ae8c6f239a9d9d6cfb76842803e42fa0d939ea"
+    },
+    {
+      "file": "blog-posts/300-sessions-worried/da.md",
+      "sha256": "1383da5265102d6a05c48e357b430a6cccdc8ecd1febb9fbb0fe1dddc8be6d3d"
+    },
+    {
+      "file": "blog-posts/3x-for-your-money/da.md",
+      "sha256": "1e50fe75a753f3432f935386f4fa198e4b5f28f18a585999e3e8c1dd2ab64798"
+    },
+    {
+      "file": "blog-posts/4-hours-debugging-no-help/da.md",
+      "sha256": "fda6a2eb94d3cd582a53b07a9bcc92461ce846d800c1431af494b6e1384e891d"
+    },
+    {
+      "file": "blog-posts/987-prompts-milestone/da.md",
+      "sha256": "d3d3eb2bc398a0a2e73c67f9deab6cf073a16830a670d7a6fef7ffebe8c94657"
+    },
+    {
+      "file": "blog-posts/adr-architecture-decision-records/da.md",
+      "sha256": "59b4fe48bb5959f40f2555ab8959d46e0ebab289b4387b60a84310cb0598e541"
+    },
+    {
+      "file": "blog-posts/adr-files-in-practice/da.md",
+      "sha256": "8ea1e76ea51beb6cf99cc348186a11011a7479d3a3c1958b150ed3e997c901b7"
+    },
+    {
+      "file": "blog-posts/agent-share-msix-auto-updates/da.md",
+      "sha256": "a0c18f8bcd2406e6fc35bad9d6d9573139c61ec4ce2ba21bb59a993d14af9208"
+    },
+    {
+      "file": "blog-posts/agent-went-fishing/da.md",
+      "sha256": "42f5e6089cbe95a64eef8b24f60bf9b8762130b52423fd96e40a6893bc2299dd"
+    },
+    {
+      "file": "blog-posts/agent-wrote-the-prompt/da.md",
+      "sha256": "ad0c2abc6c7fff4e879ec023c290e726b14ef6eea9ffec1b6b4b555ffeb0f183"
+    },
+    {
+      "file": "blog-posts/agentic-development-2026/da.md",
+      "sha256": "0b7678552e4712abc9eecda8a3cf8b2c3997d7a1778aea0f24f2f063811aec06"
+    },
+    {
+      "file": "blog-posts/agentic-live-ritual/da.md",
+      "sha256": "42b6fb962ebfda9b7a964823e0c4590ed8ed6eca69eecd55ecbf834218028f0f"
+    },
+    {
+      "file": "blog-posts/agentic-loops-oracle/da.md",
+      "sha256": "af8810dd2319441e8ffd164fad92c65364dd60da3ba2d6787f99aa2b9ee92ac4"
+    },
+    {
+      "file": "blog-posts/ai-agent-conference/da.md",
+      "sha256": "1261b68f92e07fd2fd30c03ce651e7c03400dc3a72b5955181e9c3cb4072611e"
+    },
+    {
+      "file": "blog-posts/ai-built-webshop/da.md",
+      "sha256": "f93d323b173f2d1a9387065c17ecffff6de875c4c65a5fa5b726a2457b0e217a"
+    },
+    {
+      "file": "blog-posts/ai-powered-failure-analysis/da.md",
+      "sha256": "8c648fa7dbe1cf0164d362e24b0fb7a96fea200fec1a0012c8e030142c56576b"
+    },
+    {
+      "file": "blog-posts/alp-security-by-design/da.md",
+      "sha256": "3d0bbf65fb41032e531887a953e4f293603724efba9f90d3bc832f25aefe1bfa"
+    },
+    {
+      "file": "blog-posts/anmelderen-blev-foraeldet/da.md",
+      "sha256": "f326c9fca635fa5cd8f76c90994bc2a7ef830ff60fe51e9f2c22a38a2d13dd44"
+    },
+    {
+      "file": "blog-posts/anthropic-console-experiments/da.md",
+      "sha256": "2ba476eea462c25cd5c0e20eef988137c4cbf69381a660845aba3335740349d6"
+    },
+    {
+      "file": "blog-posts/anthropic-is-the-big-winner/da.md",
+      "sha256": "c3074ff0bf64b620ed9e94961ae55623d551aaffd93738087d7a44759c1f67e2"
+    },
+    {
+      "file": "blog-posts/anthropic-pricing-unlimited/da.md",
+      "sha256": "1c80e16a55d29d210b670977ee53b8fa3b53d81ac93dfa51a0509b9e3840e2c3"
+    },
+    {
+      "file": "blog-posts/applying-ai-at-delegate/da.md",
+      "sha256": "73cba54109e2a6c53ff043e52dacd31913cfe5cdb96b65365dc1501b65bd241c"
+    },
+    {
+      "file": "blog-posts/aspire-self-healing/da.md",
+      "sha256": "7fd964b16b1284b25452a666f558f0af520a539067775fb291375dc0a1ad333b"
+    },
+    {
+      "file": "blog-posts/assembly-line-protocol/da.md",
+      "sha256": "523a86cb80c0114d7ba2493a96bfa07a4e79bd4fa0d2c52b6bc842bb5bccbf55"
+    },
+    {
+      "file": "blog-posts/biggest-challenge-what-not-to-build/da.md",
+      "sha256": "4eb268a5e6d17be856381a1df562dc91557b25e792fe6d87f016f33e22c5bd0e"
+    },
+    {
+      "file": "blog-posts/bolt-hackathon-shipped/da.md",
+      "sha256": "e274251dbc96df2a086a7cfe8bf85d90d5f875896a7dc96c298bd518bee528b2"
+    },
+    {
+      "file": "blog-posts/brain-lab/da.md",
+      "sha256": "1a4bd15bd008b8df32893ea338e49fe6872159b007d2fe15af0edf1108d7042d"
+    },
+    {
+      "file": "blog-posts/breaking-the-silence/da.md",
+      "sha256": "8cee08a3a34bd597a47fdaa236501da7a20ec6bf2b694ff9171034864653530b"
+    },
+    {
+      "file": "blog-posts/build-over-buy/da.md",
+      "sha256": "17401f7948cb2ed0dad9133eaab2af37d38f413c5db752df04660d4cbfe878d5"
+    },
+    {
+      "file": "blog-posts/build-your-own/da.md",
+      "sha256": "b2b4dd148a0356ac98da0b0364883950cbf84127ad935d7bb9c9bed716e6d2bc"
+    },
+    {
+      "file": "blog-posts/building-agentic-ide/da.md",
+      "sha256": "2f74988897b982e7036f268cc79ccf5407e84b6ce02ebd59262024c6d30f7c2a"
+    },
+    {
+      "file": "blog-posts/chatgpt-copy-paste-vs-ide/da.md",
+      "sha256": "febaf2888e32bc268b550d51764101c1b84e282004b673932a223e3adaca376e"
+    },
+    {
+      "file": "blog-posts/chatgpt-vs-ide-tools/da.md",
+      "sha256": "4a8d5544be7ace663988c91509f31690f767bf803d820839a171a69ece72f53c"
+    },
+    {
+      "file": "blog-posts/christmas-week-hacking/da.md",
+      "sha256": "20a15b73fb9eb37f33673506f8652e373cdff557a8ae8b826389540d10489fc9"
+    },
+    {
+      "file": "blog-posts/claude-4-launched-playing-gemini/da.md",
+      "sha256": "cb87bd5140f7e1325ae4d02cb045d290ab58a32ef1e3909ce9cc9905890d9937"
+    },
+    {
+      "file": "blog-posts/claude-code-changed-everything/da.md",
+      "sha256": "360a1f48c41f42a97cd6dc5d0317092d0306c47578c5544cc57e3243c9ceefe4"
+    },
+    {
+      "file": "blog-posts/claude-code-plugin-marketplace/da.md",
+      "sha256": "29588b6f1e8889add030ec28821acbb7dd6cfc2ff4c087230f2ef60b96b99a9e"
+    },
+    {
+      "file": "blog-posts/claude-flow-first-blown-away/da.md",
+      "sha256": "3bcee1b206065aca92cfd550a3be23d68895201c2f25b9ad4ac94e31903f5451"
+    },
+    {
+      "file": "blog-posts/claude-memory-feature/da.md",
+      "sha256": "f7233780b165023e1e95ce661d5c32062705477580aab034ec7a523b1edaa8dc"
+    },
+    {
+      "file": "blog-posts/claude-reads-claude/da.md",
+      "sha256": "bd3690dd1bf0d80e1e4600d957c9067595fbda37e1da9aee7e3b3f5824b1df6a"
+    },
+    {
+      "file": "blog-posts/compact-beats-clear/da.md",
+      "sha256": "b6fe45fccce76cf8ece71624483274982f2a61d1257466a7f7e28182a2ac2825"
+    },
+    {
+      "file": "blog-posts/context-windows-hidden-skill/da.md",
+      "sha256": "1e8f76df874af12fa241854c05425ecda0af6e39f083e9acf0e721f43d9b91de"
+    },
+    {
+      "file": "blog-posts/context-windows-under-the-hood/da.md",
+      "sha256": "e80387cc6193433784b3ece764904678f61e6d4d165c6706a022e8d88b2076f4"
+    },
+    {
+      "file": "blog-posts/coolify-destinations-pr/da.md",
+      "sha256": "576408ffe31b8b52d25da8d6e0266fd277ab92730333e1f53e2159b6054ac880"
+    },
+    {
+      "file": "blog-posts/cost-of-vibe-coding-tracking-tokens/da.md",
+      "sha256": "fcfc8d3327e5893fab3f141fffe40e06d45175135c098840bf366dca58871560"
+    },
+    {
+      "file": "blog-posts/crashed-my-hetzner-again/da.md",
+      "sha256": "351010f31ad54a31feda658ddaa2b6b99d8cf5ee55dcea4d69f0742ca4f84f42"
+    },
+    {
+      "file": "blog-posts/curated-prompts-are-the-product/da.md",
+      "sha256": "d8a9da5153a0703a5957e8227d1e197cc0e61535680fdd4d5d15936e1557cc15"
+    },
+    {
+      "file": "blog-posts/david-aspire/da.md",
+      "sha256": "bb5adb4de0ceaccb64fd91f6d9bafa1b3c5213de8de23b6cc580e2292b2b89cb"
+    },
+    {
+      "file": "blog-posts/develop-features-4-times-pick-best/da.md",
+      "sha256": "a4b1b3107b4cc7aaaeed3dc8a4af75b3d09c0d50bbafe4330f6d283469ea4b77"
+    },
+    {
+      "file": "blog-posts/developer-doesnt-know-what-shes-doing/da.md",
+      "sha256": "b159a862d88e450c40db50d35f0d4e63db432a4f4b4717ccacc439d5d5e91255"
+    },
+    {
+      "file": "blog-posts/discovering-bolt-new/da.md",
+      "sha256": "ac8ca8ddc7a812cdcaef866d495987175b597560c8ed22d6e1ebb5ce6b143012"
+    },
+    {
+      "file": "blog-posts/dji-quicktransfer-file-protocol/da.md",
+      "sha256": "75c411f6db1c2657ca5e9c6b411e856aa8876762ea3d5bf8519f6b396a89829b"
+    },
+    {
+      "file": "blog-posts/docker-volumes-project-context/da.md",
+      "sha256": "24f572b6742aaf92ad14469d9ec25e18f1c197be690d67cf6d3e70992331279e"
+    },
+    {
+      "file": "blog-posts/end-to-end-tests/da.md",
+      "sha256": "cee017110101c77b952a503247e96857383c9f6a16b2dbf7ce720bbf616b4469"
+    },
+    {
+      "file": "blog-posts/enterprise-adoption-begins/da.md",
+      "sha256": "b41af1de04024960c65eda58c21cba620f8026a383c142bc19977319b4ac18c2"
+    },
+    {
+      "file": "blog-posts/feedback-loop-addiction/da.md",
+      "sha256": "99a9d822678cb840ed31143ae37547516ba8fb7149225661b90c52789a596207"
+    },
+    {
+      "file": "blog-posts/field-notes/da.md",
+      "sha256": "ff0a5b71f04ae37f856547a3e70526eb2888752fc9e427582619e15b31a11b28"
+    },
+    {
+      "file": "blog-posts/first-cline-prompt/da.md",
+      "sha256": "a143b10a4bdedb8b0a8b75444ccdf9e43f964453f60fbebb3d8cbfe2f8bba12a"
+    },
+    {
+      "file": "blog-posts/first-experiments-10-websites/da.md",
+      "sha256": "a9e8ba88d8d650f932f16945649bbc2400f8efcda8db1c57fbcc72dcc4008b60"
+    },
+    {
+      "file": "blog-posts/freezer-inventory-weird-projects/da.md",
+      "sha256": "c350c5b06747d8010f4322e3a47181999f9ee1e1860f010ff10a5f4d866515a5"
+    },
+    {
+      "file": "blog-posts/from-ssh-to-coolify/da.md",
+      "sha256": "f45f33d8a5c41f99d9e68b303b959bf35f634c92b602c1a4681ad6a0f5b81899"
+    },
+    {
+      "file": "blog-posts/from-vibe-coding-to-agentic/da.md",
+      "sha256": "8470cac29f49dd6118caa35e22b13a774f1737dec116ea41bb45f7f8c5e33dc1"
+    },
+    {
+      "file": "blog-posts/gemini-3-experiments/da.md",
+      "sha256": "7580a9eb0dbaa319ff4b36ad6b678eb41f4341bdbba8bd77a3908fda8cdbb6bf"
+    },
+    {
+      "file": "blog-posts/github-copilot-parallel-swarms/da.md",
+      "sha256": "de08f24333d232515c62cbd9713d7fba3aa58069c6a168b3006b8b7372d465fb"
+    },
+    {
+      "file": "blog-posts/github-heatmap-vacation-day/da.md",
+      "sha256": "3c7436be93c2200f1e8324e0f378e7aa86ad007dafd9dce2be07c016c4b0b237"
+    },
+    {
+      "file": "blog-posts/glm-5-2-opencode-pks-cli/da.md",
+      "sha256": "32097b291e7816c958ba7cf937d81e742e600cb34e8693aacea8ecb4c2ff703b"
+    },
+    {
+      "file": "blog-posts/gpt-image-api-access/da.md",
+      "sha256": "54438ab5ec028128837ef3d3f5dee6fc6c327830abebd2eab108159457bbb775"
+    },
+    {
+      "file": "blog-posts/hackathon-prep-friday-13th/da.md",
+      "sha256": "46fa49d41af56ea7e3db2c9b5b559e9feaede6c7a082d7e58bfd1ea61e8b9cc5"
+    },
+    {
+      "file": "blog-posts/hacked-hooks-to-builtin-teams/da.md",
+      "sha256": "01752e4c1249779a881face734f732241b61b27838e958507622f029850208fb"
+    },
+    {
+      "file": "blog-posts/have-i-coded-myself-out-of-a-job/da.md",
+      "sha256": "c2318e977fcbed8411f4ed803e5b07691f01bfd2880403a3760d11132aea98f0"
+    },
+    {
+      "file": "blog-posts/heypoul/da.md",
+      "sha256": "d3ede17db869763bfe7a6e1c7b87b270cc7e3fb35f84801ba78bb4352a8ea454"
+    },
+    {
+      "file": "blog-posts/hobby-becomes-obsession/da.md",
+      "sha256": "0a655e2318747350e0de39669765668092a53a9851a1e10dd6f9c28fd4fe5860"
+    },
+    {
+      "file": "blog-posts/how-long-are-my-sessions/da.md",
+      "sha256": "2105115480d90949edcb094509233858123360eafeaea22baebe952e2521db6a"
+    },
+    {
+      "file": "blog-posts/installing-cursor-cheaper-than-cline/da.md",
+      "sha256": "bf050b20109b55538ba3bb8cf3595cba8d805e35ea95d1af847220448c866314"
+    },
+    {
+      "file": "blog-posts/instant-inference/da.md",
+      "sha256": "39f87a8724d07cfff3706de75716da2fd1b0748a75784fbe9a54ea1348d8d7b3"
+    },
+    {
+      "file": "blog-posts/it-started-at-christmas/da.md",
+      "sha256": "b591764ec555f5bdb5021d11dd39e61e1df7e0690a612608c4170fe7a121c1ae"
+    },
+    {
+      "file": "blog-posts/json-editing-prompt-vs-manual/da.md",
+      "sha256": "92c98644896846a01f0d70e10a06a2092f2e39c9954eb9af6855fef3d4846953"
+    },
+    {
+      "file": "blog-posts/kanban-backlog/da.md",
+      "sha256": "99477756667d1dfcb2a3249c2af4ba38a64a09ea7d6bde401182f9f2b4015d53"
+    },
+    {
+      "file": "blog-posts/keycloak-cimd-claude-chatgpt/da.md",
+      "sha256": "4a9ccc5688ae094541eab69ab981e6f4cbf49890ad8209a1d56f8b2e82a8612d"
+    },
+    {
+      "file": "blog-posts/kimi-k3-found-glms-work/da.md",
+      "sha256": "9fe3f05b96613dbe1e0a45259a9a72801e284280f6d601405399ea0344ea2f62"
+    },
+    {
+      "file": "blog-posts/kortet-jeg-altid-ville-bygge/da.md",
+      "sha256": "f34b195988db3096863d5fd3ef8b0dbbd9dd053b204b9565cc48c6ea16d63088"
+    },
+    {
+      "file": "blog-posts/landing-page-github-deploy-10min/da.md",
+      "sha256": "79246fef6f7e794a4bf32091a87ed1f80bbdb89ff09ccacb8c2d5ef3b99ef8fb"
+    },
+    {
+      "file": "blog-posts/landing-pages-5-minutes-secret-sauce/da.md",
+      "sha256": "44ede9d07b742bfaf7f2cc8dd5708dcb2b3cb90977e12205d817feae14941b3b"
+    },
+    {
+      "file": "blog-posts/learning-the-limits/da.md",
+      "sha256": "d382068869b48dcb9c9cd7433036a240c95130546698e15cbba9e40938505d8e"
+    },
+    {
+      "file": "blog-posts/less-reading-more-building/da.md",
+      "sha256": "f5a51027a1d07007c034332f6f968a5d065a7f0cfb875a16018356cc49e867c5"
+    },
+    {
+      "file": "blog-posts/levels-of-spec/da.md",
+      "sha256": "511921746f1e83493437a23f1fa7326929a658e33338773a456dd75cc2e89660"
+    },
+    {
+      "file": "blog-posts/live-streaming-from-dev-container/da.md",
+      "sha256": "f112c720eff67ffaf7bfc03bb7cb390f94ef7233c033d0ad5a3cba689db10a95"
+    },
+    {
+      "file": "blog-posts/longcat-video-h100-spike/da.md",
+      "sha256": "2d8a9ca8abc434f6f5cda61fec3ca142ce3d9bc5ac7705fba3e67d6a77261a49"
+    },
+    {
+      "file": "blog-posts/looking-for-ide-integration/da.md",
+      "sha256": "5553eee6a3ece367e718ac91c3d2f144d6a1ba89156e9505d5fc2e81be5a6c3d"
+    },
+    {
+      "file": "blog-posts/mail-went-to-spam/da.md",
+      "sha256": "1d493602547c6599a02c81a0436a5230184b61c36138ca9ade07cdaa8e584c9c"
+    },
+    {
+      "file": "blog-posts/may-challenge-stop-vibe-coding/da.md",
+      "sha256": "7778340d5d5c58bdaafba7dc877472ffedd35fd1cfaaf282b40dc41d74d51f36"
+    },
+    {
+      "file": "blog-posts/mcp-har-vundet/da.md",
+      "sha256": "6d57c1746d443db50954f51befe3c4b2d3a36968de9be6a31fb022434497b99f"
+    },
+    {
+      "file": "blog-posts/motion-hype-new-director/da.md",
+      "sha256": "16404106e1b8fc09191e8bb8130a172d326cee0805b75b7640172ee229056cf0"
+    },
+    {
+      "file": "blog-posts/motorcyclist-metaphor/da.md",
+      "sha256": "6616d498776480cbf3116c50887fa4b6f40953428431d97fd47b34a81ebb69ed"
+    },
+    {
+      "file": "blog-posts/one-armed-bandit/da.md",
+      "sha256": "a6e88d7aaeef00822cc3af62287310d975b2e2f6b513b421e07c6aedf91d6a0f"
+    },
+    {
+      "file": "blog-posts/one-prompt-a-whole-team/da.md",
+      "sha256": "fca765371544082c0a776f795d0d4ece1fbd107810c2c427314809360bc70bec"
+    },
+    {
+      "file": "blog-posts/one-year-vibe-coding/da.md",
+      "sha256": "e76a43fb015f9dd412b3bcca7c86f8ac97fb242494c0826cfb983caf553c4837"
+    },
+    {
+      "file": "blog-posts/openai-buys-windsurf/da.md",
+      "sha256": "9e5927cc58073bfc2ca60d7d28e010edb9400eccb275ba8e950ca26aa6e16668"
+    },
+    {
+      "file": "blog-posts/pentesten-der-ikke-var/da.md",
+      "sha256": "1cd5e4bdb5717f7596f59871b9f1ef5fd6dda723531d9d09427028fa888bfbd6"
+    },
+    {
+      "file": "blog-posts/pks-agent-coding-loop/da.md",
+      "sha256": "90c64c2db6db3fa21cfb05cdf8b79c66c89a1b41447e22fc59f978e6a6e1ed1f"
+    },
+    {
+      "file": "blog-posts/pks-agent-tunnel-bygge/da.md",
+      "sha256": "7a7711b707228e6264cb24bd789552cd66ac37321a5169916f4c5b4869c0168f"
+    },
+    {
+      "file": "blog-posts/pks-brain/da.md",
+      "sha256": "a617b9fb9f40b20ead8ce9e654eb952d80d4c236aed854708cbb975018535bc6"
+    },
+    {
+      "file": "blog-posts/pks-brain-commit-messages/da.md",
+      "sha256": "e5c83d6e9763ac27a8fd3e4c06c052b0536b26708435438347822d55a9fcb56b"
+    },
+    {
+      "file": "blog-posts/pks-brain-graph/da.md",
+      "sha256": "b8484ffa8b1b4243953431e36cb447b59760d0833b60cfafc0e1a0669d65dc04"
+    },
+    {
+      "file": "blog-posts/pks-brain-scan-commit-plan/da.md",
+      "sha256": "7502667ea3ffbaae520874072df4731af473ee127ec4d284272b28f24c4ebed2"
+    },
+    {
+      "file": "blog-posts/pks-brain-wiki/da.md",
+      "sha256": "f761f2b31fef28eb81153428b293fd255ca67aca67ec1d7d912b2680963d3870"
+    },
+    {
+      "file": "blog-posts/pks-claude-codex/da.md",
+      "sha256": "a6da98ef4f4fda34cb45e606a2b94856265f545c8c37deae7042b2e3fd06d6f1"
+    },
+    {
+      "file": "blog-posts/pks-cli-discovery-protocol/da.md",
+      "sha256": "0e8b07e527577e63de0d570e87abcb30ea69cd1668c5e8b6cec05361cd5fddfe"
+    },
+    {
+      "file": "blog-posts/pks-cli-toolbox/da.md",
+      "sha256": "0fb9fa659e9bd762ddf3fd103776b69fd0a190a09b05b9549d155b58972d32c1"
+    },
+    {
+      "file": "blog-posts/pks-image-gpt-image-2/da.md",
+      "sha256": "6bcf10ccae4d1b20d543891c3c323ecef3281d516beb84d652ae7e858632701d"
+    },
+    {
+      "file": "blog-posts/product-cli-journey/da.md",
+      "sha256": "b2cc0f4cbf2f44617c5688af70e9f62e1f7589a6566029422cb1d8cc46b562a7"
+    },
+    {
+      "file": "blog-posts/product-cli-second-attempt/da.md",
+      "sha256": "03b11d5b97b9933ff0c6a06b61bd45e0deaaebb219782f17e9bb1346c0ab7546"
+    },
+    {
+      "file": "blog-posts/project-graveyard-grows/da.md",
+      "sha256": "d36b5e3c97e7faf0ba506d42b722aa60cba93068b07c54f05cc73e7bf83d4682"
+    },
+    {
+      "file": "blog-posts/prompt-engineering-is-architecture/da.md",
+      "sha256": "b63773f74f2655022bcd3c2f12b7697c70642be757e44c8909b0f3a281152ce2"
+    },
+    {
+      "file": "blog-posts/quiet-period-just-productive/da.md",
+      "sha256": "63590e0f20535968ec583a2648a97f466294ca05f670c5b5fbac6c7a09280a63"
+    },
+    {
+      "file": "blog-posts/react2shell-vibecoding/da.md",
+      "sha256": "26591f23db73a4e1950af4b0fcf439491ac848a141d5fcca24db4b4c600f1064"
+    },
+    {
+      "file": "blog-posts/remote-mcp-claude-chatgpt/da.md",
+      "sha256": "350bebebe270a2041ca27e0bc53647c84d1af6ce6abe684afc60e0ef30673840"
+    },
+    {
+      "file": "blog-posts/rules-beat-intelligence/da.md",
+      "sha256": "0ce5e9acde4d8f039dceb8efc496a30d7956f08791500f378b8add800fa26f40"
+    },
+    {
+      "file": "blog-posts/screenshot-verification/da.md",
+      "sha256": "3e42c3ac7c9b11766837056da510ce8e4c2b33a7e88013db7ac2366c539fece3"
+    },
+    {
+      "file": "blog-posts/show-dont-describe/da.md",
+      "sha256": "37e2e9ab407755e9ac2ce0b9603471bfe627b19f461aa88e940b5c2396a948a4"
+    },
+    {
+      "file": "blog-posts/simple-prompts/da.md",
+      "sha256": "3f91e8d136a5f39b1c8f00428808851df8f9a8cbeaeda8fa5596a0bc7b447ad5"
+    },
+    {
+      "file": "blog-posts/sixteen-hour-paradox/da.md",
+      "sha256": "8a323bc5136a15e8d7aa10c30a21e036ac9dee907326e22e152ef467aa286ff4"
+    },
+    {
+      "file": "blog-posts/skill-for-product-cli/da.md",
+      "sha256": "3578988fd1265101de01b3d5a59911667d34213dcd146b80274bfb95bf3ac1dc"
+    },
+    {
+      "file": "blog-posts/sony-a7-ftp/da.md",
+      "sha256": "d8e94a4b8ce7713f23136e4b1b530a1085ce2e8a4628b1705f5893905ef87ed2"
+    },
+    {
+      "file": "blog-posts/spawn-narrow-disable-mcp/da.md",
+      "sha256": "aa63d3962ab2d2e5b0ca1cf0cb9edd19b7f91e173eee6884a48836b705090cc5"
+    },
+    {
+      "file": "blog-posts/starting-100daystooffload/da.md",
+      "sha256": "fbc5c461511038ecf22109766b7f2e78421788f411b119ba78bd1a6bff43da1a"
+    },
+    {
+      "file": "blog-posts/swe-benchmarks/da.md",
+      "sha256": "b3bfd013966332e5d2b93df3a835d4c6212ab91b947764c514011be3994ebded"
+    },
+    {
+      "file": "blog-posts/team-mode-arrives/da.md",
+      "sha256": "91283deb294b8047fe2204c2a0d4506dbbaac404df6c94dd0e75a4cba783f412"
+    },
+    {
+      "file": "blog-posts/team-starts-noticing/da.md",
+      "sha256": "0ebc92eea9e8d5dba69553c1441426fac0df4a86da38881f19f64d4fb6b16582"
+    },
+    {
+      "file": "blog-posts/technology-is-ready-stop-waiting/da.md",
+      "sha256": "734f0980cb671a623a151d21ad588ee9aedd3cbe8c01ea3e0227b38833a49f5a"
+    },
+    {
+      "file": "blog-posts/template-less-development/da.md",
+      "sha256": "c6645b87ababcbc1e026a34c94b0001738d81d56d6423f9d2b3683a075ea1d11"
+    },
+    {
+      "file": "blog-posts/terminal-renaissance/da.md",
+      "sha256": "19cb4d9c75e8166ed9a584a501ae7238355d4cada65cab0a6d603b308f9f4485"
+    },
+    {
+      "file": "blog-posts/testing-live-streaming-teams/da.md",
+      "sha256": "e9c1fb7aa1b96a56cdd2da7b50ad6be5a3a5f4c81a1fed6ec28b07f0a9071253"
+    },
+    {
+      "file": "blog-posts/the-box-wont-boot/da.md",
+      "sha256": "1a799e3ec023106a307f28c5d34c2cb6bf8c7409d69ad768c49d0b801d0d05c9"
+    },
+    {
+      "file": "blog-posts/the-gate-is-you/da.md",
+      "sha256": "5a5ff0f15842722b0dcee8a3a5593ebfc7e149c468e926830c4689d39daac2d6"
+    },
+    {
+      "file": "blog-posts/the-gate-is-you-part-2/da.md",
+      "sha256": "756a4062f5d1967b2181f2b5e9d1c80cd16f8fc2fca8aa43f4be8c5151084072"
+    },
+    {
+      "file": "blog-posts/the-grep-that-wasnt-grep/da.md",
+      "sha256": "b4021885b90bea775040ea8b69c0671d664e8413e49d6a02d8c651d75af67893"
+    },
+    {
+      "file": "blog-posts/the-hackathon-era/da.md",
+      "sha256": "c25ee969f6f7d2a714870437783150fd0f9903393ee20ff70cca0836ed6b2682"
+    },
+    {
+      "file": "blog-posts/the-key-never-leaves-the-host/da.md",
+      "sha256": "781a72aab6cc2c1e28956e5aab3af7cdceb668917fbac586fc133c0abf5b50f2"
+    },
+    {
+      "file": "blog-posts/the-may-challenge/da.md",
+      "sha256": "345f8605c5c227189c5fbf0fbfd7fd6be637b559fb7e0387aa5cdae0354a6788"
+    },
+    {
+      "file": "blog-posts/the-plateau/da.md",
+      "sha256": "1a3ef08162bb1054adfd9210f6777c9607074d2188fd56b2b0fd201b539c323e"
+    },
+    {
+      "file": "blog-posts/the-security-reset/da.md",
+      "sha256": "e8d2e17eac1280f7162936e0ebc74058d9526d3215f4693d06440c9d4e43e01c"
+    },
+    {
+      "file": "blog-posts/the-watcher-you-didnt-start/da.md",
+      "sha256": "78ca535940aff40ef82bc2ec616a99f4efc6f4d7a7cf711a85d0e80afea7cc01"
+    },
+    {
+      "file": "blog-posts/thought-id-been-hacked/da.md",
+      "sha256": "6c5bda1159158ee3dddce4b77b7fe7cca39cebb05fc62048aaab7fed3efefd68"
+    },
+    {
+      "file": "blog-posts/tigerspring-model-market/da.md",
+      "sha256": "182e504c24c877a45b9f49d25346c9256dec5f3564ef01c6a9d1e4c234b7eab4"
+    },
+    {
+      "file": "blog-posts/told-agent-to-try-product-cli/da.md",
+      "sha256": "426636d5ecd2e735204d1b2f195e8e6397177881c4f5c19bba5e2cc268f96929"
+    },
+    {
+      "file": "blog-posts/tractor-registry/da.md",
+      "sha256": "1b9afcf3e32cde2bb7fc57950d66fdc5f76d0e3362bd49e3be90d6166cc84bab"
+    },
+    {
+      "file": "blog-posts/two-agents-one-team/da.md",
+      "sha256": "bdc6faa38d9bdfe9cbf0f70cb0382b5cff083516929d51ce12d7783d5c7b3cbb"
+    },
+    {
+      "file": "blog-posts/typescript-7-native-compiler/da.md",
+      "sha256": "cc8688a3a2c37a826e55615a1d4f7255c140b25db4b8ed1253368f81a77b1f71"
+    },
+    {
+      "file": "blog-posts/ultracode-became-a-verb/da.md",
+      "sha256": "46bd9163c359d3dad1c881f435d2006339cd2dc730db5bcbcdf9c2f764f5815c"
+    },
+    {
+      "file": "blog-posts/umbraco-hackday/da.md",
+      "sha256": "16554635d97078eb6d49c58b7a29d49c54344bafd8d9c72de612388a43042c0e"
+    },
+    {
+      "file": "blog-posts/verbos-102-vibe-coding-teams-clawdbot/da.md",
+      "sha256": "85a67863d9c3c7d97fe2bd64a8fb98d2245680eebcb55df338599701e90d21a9"
+    },
+    {
+      "file": "blog-posts/verbos-76-100x-developer/da.md",
+      "sha256": "749215f9074c9cb335841539a6e55098a8792cb0f9a53e9f6b7b65086db47d79"
+    },
+    {
+      "file": "blog-posts/verbos-86-mcp-vibe-coding-a2a/da.md",
+      "sha256": "4d456055cd0eeb2ece9683663a22fc381ddf7278e4769177a41996bc39de2800"
+    },
+    {
+      "file": "blog-posts/verbos-92-claude-code-agent-swarms/da.md",
+      "sha256": "ad33bcd4bc80ded0157aea0e38687644190fd32567f74ddd0ffc7e14a4004bd9"
+    },
+    {
+      "file": "blog-posts/vibe-coded/da.md",
+      "sha256": "f16a1d38c47c49640e9394f0ab193d9cfdd3ba4ab87024fdb9eac4ef61fea5c1"
+    },
+    {
+      "file": "blog-posts/vibe-coder-nightmare-internet-down/da.md",
+      "sha256": "a221c2df09a6333ac35206d849cf7977e53142b7d6f43b41b97dcd2e9537287e"
+    },
+    {
+      "file": "blog-posts/vibe-coding-karpathy-names-it/da.md",
+      "sha256": "6bba5da1727a1da9c09f9dc1ad546ec19e7f47ec890921c52dfe045e1dc92856"
+    },
+    {
+      "file": "blog-posts/vibecast-is-born/da.md",
+      "sha256": "8d05f25254e46754fa4cfbc3d73dbc0bcbd97c7bd886cadf891bbb90b47e9100"
+    },
+    {
+      "file": "blog-posts/vibecast-open-source/da.md",
+      "sha256": "d97ca04d2652db923f104a7d9479b91e080b3deadbaac467026f416b6f6888a9"
+    },
+    {
+      "file": "blog-posts/vibecoding-101-multitask/da.md",
+      "sha256": "abf118b1741cb58c32ec45a749ec235367f7a3781042475f26c72e501dc37d48"
+    },
+    {
+      "file": "blog-posts/voice-coach-every-prompt/da.md",
+      "sha256": "3c408bbeb1c91adf75ff41ef79818b446878048c08ff8349e30e73f4c67ccf60"
+    },
+    {
+      "file": "blog-posts/voice-models-danish-hour/da.md",
+      "sha256": "f00f4bafda7b33246b8dcaf285b85003518c60ee4edcbc44ff1845ea6d26da4b"
+    },
+    {
+      "file": "blog-posts/vr-coding-at-the-office/da.md",
+      "sha256": "a91c7dba6ce8ee0225e0f2078dbc8ddd9dab1a8405e0497459e7c8261e6856d2"
+    },
+    {
+      "file": "blog-posts/we-just-use-handy/da.md",
+      "sha256": "48c16c9408b9ec627baba3ee67e67d77bcfae7de14defdb913d60f78ab7ef803"
+    },
+    {
+      "file": "blog-posts/webcontainers-vscode-browser/da.md",
+      "sha256": "0cbb1572d3fd7c883a6f524d0ece72cadd80a0b84eb72d6a8c8d59921101e625"
+    },
+    {
+      "file": "blog-posts/what-i-built-quietly/da.md",
+      "sha256": "0354c6a93ac3f4931c235def0fd0f5297604c206a44a5d8c76496dd732ec983a"
+    },
+    {
+      "file": "blog-posts/what-i-wouldnt-code/da.md",
+      "sha256": "4839908942b17a426c128d47e238caaebb341825ce12c9831a8c268c8db87d81"
+    },
+    {
+      "file": "blog-posts/when-ai-can-build-everything/da.md",
+      "sha256": "73780f5a330a1dca96f3560ecae31e79a9aeb09542a4e3bc3300d5be5d2df395"
+    },
+    {
+      "file": "blog-posts/when-anthropic-goes-down/da.md",
+      "sha256": "20df6aaffd7d900a1e2685297bb750ba8906dc8c56a223c0d96d6e30902a1303"
+    },
+    {
+      "file": "blog-posts/where-are-we-headed/da.md",
+      "sha256": "8ba00e20e0656c1dbff91045565b3cbb38c01a73de8c01ab39162e60090d21d6"
+    },
+    {
+      "file": "blog-posts/why-a-20-year-developer-cares/da.md",
+      "sha256": "5a2ed2f283b3a4380e0f1bf31b0de26e99820734a6c545c20c121753e52a0d1d"
+    },
+    {
+      "file": "blog-posts/wispr-is-not-whisper/da.md",
+      "sha256": "80699fe6f164edb48f8b0beae2115db92d5cf4ce27bd0c1ce586689465233835"
+    },
+    {
+      "file": "blog-posts/workspace-med-renters-rente/da.md",
+      "sha256": "29d0f6a7f82d61d5e23a96905cf0bd606b024fb3b0d1ca3f27dfa71f942fd705"
+    },
+    {
+      "file": "blog-posts/writing-objectives-before-bed/da.md",
+      "sha256": "df7710e67599e4aa39b53e128754803ea034d239cde40c93bf11ec12f05c2838"
+    }
+  ],
+  "additional_file_count": 1,
+  "quality": [
+    {
+      "actual": [
+        {
+          "Check": "Dansk.Interesse",
+          "End": 20,
+          "Line": 1,
+          "Match": "interresse",
+          "Message": "Stavefejl: skriv 'interesse' i stedet for 'interresse'.",
+          "Severity": "error",
+          "Source": "https://ro.dsn.dk/",
+          "Span": [
+            11,
+            20
+          ],
+          "Start": 10,
+          "Suggestions": [
+            "interesse"
+          ]
+        }
+      ],
+      "case": {
+        "category": "spelling",
+        "findings": [
+          [
+            "Dansk.Interesse",
+            "interresse",
+            "interesse"
+          ]
+        ],
+        "text": "Hun havde interresse for kurset."
+      },
+      "passed": true
+    },
+    {
+      "actual": [
+        {
+          "Check": "Danish.Spelling",
+          "End": 13,
+          "Line": 1,
+          "Match": "plejedede",
+          "Message": "Ordet genkendes ikke; overvej 'plejede'.",
+          "Severity": "warning",
+          "Source": "COR / Stavekontrolden / DDT",
+          "Span": [
+            5,
+            13
+          ],
+          "Start": 4,
+          "Suggestions": [
+            "plejede"
+          ]
+        }
+      ],
+      "case": {
+        "category": "spelling",
+        "findings": [
+          [
+            "Danish.Spelling",
+            "plejedede",
+            "plejede"
+          ]
+        ],
+        "text": "Han plejedede at komme tidligt."
+      },
+      "passed": true
+    },
+    {
+      "actual": [
+        {
+          "Check": "Danish.Spelling",
+          "End": 22,
+          "Line": 1,
+          "Match": "utrodeligt",
+          "Message": "Ordet genkendes ikke; overvej 'utroligt'.",
+          "Severity": "warning",
+          "Source": "COR / Stavekontrolden / DDT",
+          "Span": [
+            13,
+            22
+          ],
+          "Start": 12,
+          "Suggestions": [
+            "utroligt"
+          ]
+        }
+      ],
+      "case": {
+        "category": "spelling",
+        "findings": [
+          [
+            "Danish.Spelling",
+            "utrodeligt",
+            "utroligt"
+          ]
+        ],
+        "text": "Det er helt utrodeligt."
+      },
+      "passed": true
+    },
+    {
+      "actual": [
+        {
+          "Check": "Dansk.Abonnement",
+          "End": 21,
+          "Line": 1,
+          "Match": "abonnoment",
+          "Message": "Stavefejl: skriv 'abonnement' i stedet for 'abonnoment'.",
+          "Severity": "error",
+          "Source": "https://ro.dsn.dk/",
+          "Span": [
+            12,
+            21
+          ],
+          "Start": 11,
+          "Suggestions": [
+            "abonnement"
+          ]
+        }
+      ],
+      "case": {
+        "category": "spelling",
+        "findings": [
+          [
+            "Dansk.Abonnement",
+            "abonnoment",
+            "abonnement"
+          ]
+        ],
+        "text": "Jeg har et abonnoment."
+      },
+      "passed": true
+    },
+    {
+      "actual": [
+        {
+          "Check": "Danish.FiniteVerb",
+          "End": 8,
+          "Line": 1,
+          "Match": "lære",
+          "Message": "Efter grundleddet 'Jeg' forventes et bøjet udsagnsord; overvej 'lærer'.",
+          "Severity": "warning",
+          "Source": "COR / Stavekontrolden / DDT",
+          "Span": [
+            5,
+            8
+          ],
+          "Start": 4,
+          "Suggestions": [
+            "lærer"
+          ]
+        }
+      ],
+      "case": {
+        "category": "finite_verb",
+        "findings": [
+          [
+            "Danish.FiniteVerb",
+            "lære",
+            "lærer"
+          ]
+        ],
+        "text": "Jeg lære dansk."
+      },
+      "passed": true
+    },
+    {
+      "actual": [
+        {
+          "Check": "Danish.FiniteVerb",
+          "End": 12,
+          "Line": 1,
+          "Match": "reparere",
+          "Message": "Efter grundleddet 'Hun' forventes et bøjet udsagnsord; overvej 'reparerer'.",
+          "Severity": "warning",
+          "Source": "COR / Stavekontrolden / DDT",
+          "Span": [
+            5,
+            12
+          ],
+          "Start": 4,
+          "Suggestions": [
+            "reparerer"
+          ]
+        }
+      ],
+      "case": {
+        "category": "finite_verb",
+        "findings": [
+          [
+            "Danish.FiniteVerb",
+            "reparere",
+            "reparerer"
+          ]
+        ],
+        "text": "Hun reparere cyklen."
+      },
+      "passed": true
+    },
+    {
+      "actual": [
+        {
+          "Check": "Danish.FiniteVerb",
+          "End": 12,
+          "Line": 1,
+          "Match": "diskutere",
+          "Message": "Efter grundleddet 'Vi' forventes et bøjet udsagnsord; overvej 'diskuterer'.",
+          "Severity": "warning",
+          "Source": "COR / Stavekontrolden / DDT",
+          "Span": [
+            4,
+            12
+          ],
+          "Start": 3,
+          "Suggestions": [
+            "diskuterer"
+          ]
+        }
+      ],
+      "case": {
+        "category": "finite_verb",
+        "findings": [
+          [
+            "Danish.FiniteVerb",
+            "diskutere",
+            "diskuterer"
+          ]
+        ],
+        "text": "Vi diskutere planen."
+      },
+      "passed": true
+    },
+    {
+      "actual": [
+        {
+          "Check": "Danish.AfterModal",
+          "End": 13,
+          "Line": 1,
+          "Match": "lærer",
+          "Message": "Efter 'kan' forventes infinitiv; overvej 'lære'.",
+          "Severity": "warning",
+          "Source": "COR / Stavekontrolden / DDT",
+          "Span": [
+            9,
+            13
+          ],
+          "Start": 8,
+          "Suggestions": [
+            "lære"
+          ]
+        }
+      ],
+      "case": {
+        "category": "modal",
+        "findings": [
+          [
+            "Danish.AfterModal",
+            "lærer",
+            "lære"
+          ]
+        ],
+        "text": "Jeg kan lærer dansk."
+      },
+      "passed": true
+    },
+    {
+      "actual": [
+        {
+          "Check": "Danish.AfterModal",
+          "End": 17,
+          "Line": 1,
+          "Match": "reparerer",
+          "Message": "Efter 'vil' forventes infinitiv; overvej 'reparere'.",
+          "Severity": "warning",
+          "Source": "COR / Stavekontrolden / DDT",
+          "Span": [
+            9,
+            17
+          ],
+          "Start": 8,
+          "Suggestions": [
+            "reparere"
+          ]
+        }
+      ],
+      "case": {
+        "category": "modal",
+        "findings": [
+          [
+            "Danish.AfterModal",
+            "reparerer",
+            "reparere"
+          ]
+        ],
+        "text": "Hun vil reparerer cyklen."
+      },
+      "passed": true
+    },
+    {
+      "actual": [
+        {
+          "Check": "Danish.AfterModal",
+          "End": 18,
+          "Line": 1,
+          "Match": "undersøger",
+          "Message": "Efter 'skal' forventes infinitiv; overvej 'undersøge'.",
+          "Severity": "warning",
+          "Source": "COR / Stavekontrolden / DDT",
+          "Span": [
+            9,
+            18
+          ],
+          "Start": 8,
+          "Suggestions": [
+            "undersøge"
+          ]
+        }
+      ],
+      "case": {
+        "category": "modal",
+        "findings": [
+          [
+            "Danish.AfterModal",
+            "undersøger",
+            "undersøge"
+          ]
+        ],
+        "text": "Vi skal undersøger sagen."
+      },
+      "passed": true
+    },
+    {
+      "actual": [
+        {
+          "Check": "Danish.PredicateAgreement",
+          "End": 20,
+          "Line": 1,
+          "Match": "dygtig",
+          "Message": "Tillægsordet skal passe til 'Modellerne'; overvej 'dygtige'.",
+          "Severity": "warning",
+          "Source": "COR / Stavekontrolden / DDT",
+          "Span": [
+            15,
+            20
+          ],
+          "Start": 14,
+          "Suggestions": [
+            "dygtige"
+          ]
+        }
+      ],
+      "case": {
+        "category": "predicate",
+        "findings": [
+          [
+            "Danish.PredicateAgreement",
+            "dygtig",
+            "dygtige"
+          ]
+        ],
+        "text": "Modellerne er dygtig."
+      },
+      "passed": true
+    },
+    {
+      "actual": [
+        {
+          "Check": "Danish.PredicateAgreement",
+          "End": 15,
+          "Line": 1,
+          "Match": "glad",
+          "Message": "Tillægsordet skal passe til 'Børnene'; overvej 'glade'.",
+          "Severity": "warning",
+          "Source": "COR / Stavekontrolden / DDT",
+          "Span": [
+            12,
+            15
+          ],
+          "Start": 11,
+          "Suggestions": [
+            "glade"
+          ]
+        }
+      ],
+      "case": {
+        "category": "predicate",
+        "findings": [
+          [
+            "Danish.PredicateAgreement",
+            "glad",
+            "glade"
+          ]
+        ],
+        "text": "Børnene er glad."
+      },
+      "passed": true
+    },
+    {
+      "actual": [
+        {
+          "Check": "Danish.PredicateAgreement",
+          "End": 13,
+          "Line": 1,
+          "Match": "smuk",
+          "Message": "Tillægsordet skal passe til 'Huset'; overvej 'smukt'.",
+          "Severity": "warning",
+          "Source": "COR / Stavekontrolden / DDT",
+          "Span": [
+            10,
+            13
+          ],
+          "Start": 9,
+          "Suggestions": [
+            "smukt"
+          ]
+        }
+      ],
+      "case": {
+        "category": "predicate",
+        "findings": [
+          [
+            "Danish.PredicateAgreement",
+            "smuk",
+            "smukt"
+          ]
+        ],
+        "text": "Huset er smuk."
+      },
+      "passed": true
+    },
+    {
+      "actual": [
+        {
+          "Check": "Danish.ArticleGender",
+          "End": 9,
+          "Line": 1,
+          "Match": "et",
+          "Message": "'workshop' har fk-køn i COR; overvej 'en'.",
+          "Severity": "warning",
+          "Source": "COR / Stavekontrolden / DDT",
+          "Span": [
+            8,
+            9
+          ],
+          "Start": 7,
+          "Suggestions": [
+            "en"
+          ]
+        }
+      ],
+      "case": {
+        "category": "article",
+        "findings": [
+          [
+            "Danish.ArticleGender",
+            "et",
+            "en"
+          ]
+        ],
+        "text": "Det er et workshop."
+      },
+      "passed": true
+    },
+    {
+      "actual": [
+        {
+          "Check": "Danish.ArticleGender",
+          "End": 11,
+          "Line": 1,
+          "Match": "en",
+          "Message": "'hus' har itk-køn i COR; overvej 'et'.",
+          "Severity": "warning",
+          "Source": "COR / Stavekontrolden / DDT",
+          "Span": [
+            10,
+            11
+          ],
+          "Start": 9,
+          "Suggestions": [
+            "et"
+          ]
+        }
+      ],
+      "case": {
+        "category": "article",
+        "findings": [
+          [
+            "Danish.ArticleGender",
+            "en",
+            "et"
+          ]
+        ],
+        "text": "Vi købte en hus."
+      },
+      "passed": true
+    },
+    {
+      "actual": [
+        {
+          "Check": "Danish.ArticleGender",
+          "End": 11,
+          "Line": 1,
+          "Match": "et",
+          "Message": "'milepæl' har fk-køn i COR; overvej 'en'.",
+          "Severity": "warning",
+          "Source": "COR / Stavekontrolden / DDT",
+          "Span": [
+            10,
+            11
+          ],
+          "Start": 9,
+          "Suggestions": [
+            "en"
+          ]
+        }
+      ],
+      "case": {
+        "category": "article",
+        "findings": [
+          [
+            "Danish.ArticleGender",
+            "et",
+            "en"
+          ]
+        ],
+        "text": "Vi nåede et milepæl."
+      },
+      "passed": true
+    },
+    {
+      "actual": [
+        {
+          "Check": "Danish.AdjectiveAgreement",
+          "End": 16,
+          "Line": 1,
+          "Match": "enormt",
+          "Message": "Bøjningen skal passe til 'gevinst'; overvej 'enorm'.",
+          "Severity": "warning",
+          "Source": "COR / Stavekontrolden / DDT",
+          "Span": [
+            11,
+            16
+          ],
+          "Start": 10,
+          "Suggestions": [
+            "enorm"
+          ]
+        }
+      ],
+      "case": {
+        "category": "adjective",
+        "findings": [
+          [
+            "Danish.AdjectiveAgreement",
+            "enormt",
+            "enorm"
+          ]
+        ],
+        "text": "Vi fik en enormt gevinst."
+      },
+      "passed": true
+    },
+    {
+      "actual": [
+        {
+          "Check": "Danish.AdjectiveAgreement",
+          "End": 16,
+          "Line": 1,
+          "Match": "rigtig",
+          "Message": "Bøjningen skal passe til 'produkt'; overvej 'rigtigt'.",
+          "Severity": "warning",
+          "Source": "COR / Stavekontrolden / DDT",
+          "Span": [
+            11,
+            16
+          ],
+          "Start": 10,
+          "Suggestions": [
+            "rigtigt"
+          ]
+        }
+      ],
+      "case": {
+        "category": "adjective",
+        "findings": [
+          [
+            "Danish.AdjectiveAgreement",
+            "rigtig",
+            "rigtigt"
+          ]
+        ],
+        "text": "Det er et rigtig produkt."
+      },
+      "passed": true
+    },
+    {
+      "actual": [
+        {
+          "Check": "Danish.AdjectiveAgreement",
+          "End": 16,
+          "Line": 1,
+          "Match": "ærlig",
+          "Message": "Bøjningen skal passe til 'svar'; overvej 'ærligt'.",
+          "Severity": "warning",
+          "Source": "COR / Stavekontrolden / DDT",
+          "Span": [
+            12,
+            16
+          ],
+          "Start": 11,
+          "Suggestions": [
+            "ærligt"
+          ]
+        }
+      ],
+      "case": {
+        "category": "adjective",
+        "findings": [
+          [
+            "Danish.AdjectiveAgreement",
+            "ærlig",
+            "ærligt"
+          ]
+        ],
+        "text": "Hun gav et ærlig svar."
+      },
+      "passed": true
+    },
+    {
+      "actual": [
+        {
+          "Check": "Danish.RepeatedWord",
+          "End": 11,
+          "Line": 1,
+          "Match": "har",
+          "Message": "'har' står to gange i træk; kontrollér gentagelsen.",
+          "Severity": "warning",
+          "Source": "COR / Stavekontrolden / DDT",
+          "Span": [
+            9,
+            11
+          ],
+          "Start": 8,
+          "Suggestions": []
+        }
+      ],
+      "case": {
+        "category": "repetition",
+        "findings": [
+          [
+            "Danish.RepeatedWord",
+            "har",
+            null
+          ]
+        ],
+        "text": "Han har har skrevet brevet."
+      },
+      "passed": true
+    },
+    {
+      "actual": [
+        {
+          "Check": "Danish.RepeatedWord",
+          "End": 14,
+          "Line": 1,
+          "Match": "til",
+          "Message": "'til' står to gange i træk; kontrollér gentagelsen.",
+          "Severity": "warning",
+          "Source": "COR / Stavekontrolden / DDT",
+          "Span": [
+            12,
+            14
+          ],
+          "Start": 11,
+          "Suggestions": []
+        }
+      ],
+      "case": {
+        "category": "repetition",
+        "findings": [
+          [
+            "Danish.RepeatedWord",
+            "til",
+            null
+          ]
+        ],
+        "text": "Vi går til til mødet."
+      },
+      "passed": true
+    },
+    {
+      "actual": [],
+      "case": {
+        "category": "verb_control",
+        "findings": [],
+        "text": "Jeg lærer dansk."
+      },
+      "passed": true
+    },
+    {
+      "actual": [],
+      "case": {
+        "category": "verb_control",
+        "findings": [],
+        "text": "Jeg vil lære dansk."
+      },
+      "passed": true
+    },
+    {
+      "actual": [],
+      "case": {
+        "category": "verb_control",
+        "findings": [],
+        "text": "Kunne jeg bede om hjælp?"
+      },
+      "passed": true
+    },
+    {
+      "actual": [],
+      "case": {
+        "category": "verb_control",
+        "findings": [],
+        "text": "Det ville jeg stadig være glad for."
+      },
+      "passed": true
+    },
+    {
+      "actual": [],
+      "case": {
+        "category": "verb_control",
+        "findings": [],
+        "text": "Hun kan reparere cyklen."
+      },
+      "passed": true
+    },
+    {
+      "actual": [],
+      "case": {
+        "category": "verb_control",
+        "findings": [],
+        "text": "Vi skal undersøge sagen."
+      },
+      "passed": true
+    },
+    {
+      "actual": [],
+      "case": {
+        "category": "verb_control",
+        "findings": [],
+        "text": "De to værktøjer virker."
+      },
+      "passed": true
+    },
+    {
+      "actual": [],
+      "case": {
+        "category": "predicate_control",
+        "findings": [],
+        "text": "Modellerne er dygtige."
+      },
+      "passed": true
+    },
+    {
+      "actual": [],
+      "case": {
+        "category": "predicate_control",
+        "findings": [],
+        "text": "De er bedst."
+      },
+      "passed": true
+    },
+    {
+      "actual": [],
+      "case": {
+        "category": "predicate_control",
+        "findings": [],
+        "text": "Kaffe er godt."
+      },
+      "passed": true
+    },
+    {
+      "actual": [],
+      "case": {
+        "category": "predicate_control",
+        "findings": [],
+        "text": "De er vant til det."
+      },
+      "passed": true
+    },
+    {
+      "actual": [],
+      "case": {
+        "category": "predicate_control",
+        "findings": [],
+        "text": "De er klar over problemet."
+      },
+      "passed": true
+    },
+    {
+      "actual": [],
+      "case": {
+        "category": "predicate_control",
+        "findings": [],
+        "text": "Opgaver bliver løst."
+      },
+      "passed": true
+    },
+    {
+      "actual": [],
+      "case": {
+        "category": "predicate_control",
+        "findings": [],
+        "text": "At løse problemer er svært."
+      },
+      "passed": true
+    },
+    {
+      "actual": [],
+      "case": {
+        "category": "predicate_control",
+        "findings": [],
+        "text": "At gøre det for to billeder er nemt."
+      },
+      "passed": true
+    },
+    {
+      "actual": [],
+      "case": {
+        "category": "adjective_control",
+        "findings": [],
+        "text": "Vi fik en enorm gevinst."
+      },
+      "passed": true
+    },
+    {
+      "actual": [],
+      "case": {
+        "category": "adjective_control",
+        "findings": [],
+        "text": "Det er god reklame."
+      },
+      "passed": true
+    },
+    {
+      "actual": [],
+      "case": {
+        "category": "adjective_control",
+        "findings": [],
+        "text": "Hele kæden virker."
+      },
+      "passed": true
+    },
+    {
+      "actual": [],
+      "case": {
+        "category": "adjective_control",
+        "findings": [],
+        "text": "Den mest interessante artikel er god."
+      },
+      "passed": true
+    },
+    {
+      "actual": [],
+      "case": {
+        "category": "adjective_control",
+        "findings": [],
+        "text": "Det her nye projekt virker."
+      },
+      "passed": true
+    },
+    {
+      "actual": [],
+      "case": {
+        "category": "adjective_control",
+        "findings": [],
+        "text": "GLM's færdige rapport ligger klar."
+      },
+      "passed": true
+    },
+    {
+      "actual": [],
+      "case": {
+        "category": "adjective_control",
+        "findings": [],
+        "text": "Konsulentens nye produkt virker."
+      },
+      "passed": true
+    },
+    {
+      "actual": [],
+      "case": {
+        "category": "adjective_control",
+        "findings": [],
+        "text": "Det er den slags sproglig udvikling, vi ser."
+      },
+      "passed": true
+    },
+    {
+      "actual": [],
+      "case": {
+        "category": "adjective_control",
+        "findings": [],
+        "text": "God kørsel kræver øvelse."
+      },
+      "passed": true
+    },
+    {
+      "actual": [],
+      "case": {
+        "category": "article_control",
+        "findings": [],
+        "text": "Det er en workshop."
+      },
+      "passed": true
+    },
+    {
+      "actual": [],
+      "case": {
+        "category": "article_control",
+        "findings": [],
+        "text": "Det lød godt."
+      },
+      "passed": true
+    },
+    {
+      "actual": [],
+      "case": {
+        "category": "article_control",
+        "findings": [],
+        "text": "Var det nostalgi?"
+      },
+      "passed": true
+    },
+    {
+      "actual": [],
+      "case": {
+        "category": "article_control",
+        "findings": [],
+        "text": "Det er et computer vision-projekt."
+      },
+      "passed": true
+    },
+    {
+      "actual": [],
+      "case": {
+        "category": "article_control",
+        "findings": [],
+        "text": "Der var en A/B-test."
+      },
+      "passed": true
+    },
+    {
+      "actual": [],
+      "case": {
+        "category": "repetition_control",
+        "findings": [],
+        "text": "Han har taget taget af skuret."
+      },
+      "passed": true
+    },
+    {
+      "actual": [],
+      "case": {
+        "category": "repetition_control",
+        "findings": [],
+        "text": "Så så han huset."
+      },
+      "passed": true
+    },
+    {
+      "actual": [],
+      "case": {
+        "category": "repetition_control",
+        "findings": [],
+        "text": "Dengang troede jeg jeg kunne gøre det."
+      },
+      "passed": true
+    },
+    {
+      "actual": [],
+      "case": {
+        "category": "repetition_control",
+        "findings": [],
+        "text": "Vi ved ved nærmere eftertanke godt, hvem det var."
+      },
+      "passed": true
+    },
+    {
+      "actual": [],
+      "case": {
+        "category": "english_control",
+        "findings": [],
+        "text": "> Features in this version are working correctly."
+      },
+      "passed": true
+    },
+    {
+      "actual": [],
+      "case": {
+        "category": "code_control",
+        "findings": [],
+        "text": "```sessionstory\n{\"text\":\"Jeg lære dansk. Han plejedede at komme.\"}\n```\n\nAlt er i orden."
+      },
+      "passed": true
+    },
+    {
+      "actual": [],
+      "case": {
+        "category": "code_control",
+        "findings": [],
+        "text": "Eksemplet er `Jeg lære dansk`."
+      },
+      "passed": true
+    },
+    {
+      "actual": [],
+      "case": {
+        "category": "spelling_control",
+        "findings": [],
+        "text": "Hun havde interesse for kurset."
+      },
+      "passed": true
+    },
+    {
+      "actual": [],
+      "case": {
+        "category": "spelling_control",
+        "findings": [],
+        "text": "Han plejede at komme tidligt."
+      },
+      "passed": true
+    },
+    {
+      "actual": [],
+      "case": {
+        "category": "spelling_control",
+        "findings": [],
+        "text": "Det er helt utroligt."
+      },
+      "passed": true
+    },
+    {
+      "actual": [],
+      "case": {
+        "category": "spelling_control",
+        "findings": [],
+        "text": "Jeg har et abonnement."
+      },
+      "passed": true
+    }
+  ],
+  "findings": [
+    {
+      "Check": "Danish.Spelling",
+      "End": 845,
+      "Line": 25,
+      "Match": "tragedisk",
+      "Message": "Ordet genkendes ikke; overvej 'tragisk'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        144,
+        152
+      ],
+      "Start": 836,
+      "Suggestions": [
+        "tragisk"
+      ],
+      "context": "en console og skrive en prompt, falder du bagud. Ikke på en tragedisk måde — mere ligesom du stadig tænker omkring at komme i form, mens andre allere",
+      "file": "blog-posts/1000-prompts-96-days/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.Spelling",
+      "End": 636,
+      "Line": 23,
+      "Match": "kvittringer",
+      "Message": "Ordet genkendes ikke; overvej 'kvitteringer'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        156,
+        166
+      ],
+      "Start": 625,
+      "Suggestions": [
+        "kvitteringer"
+      ],
+      "context": " alt — hver prompt, hvert svar, hver token brugt. Den slags kvittringer viser sig at betyde noget, når du prøver at fortælle folk, hvad der skete.\n\nHva",
+      "file": "blog-posts/300-sessions-and-counting/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.Spelling",
+      "End": 960,
+      "Line": 25,
+      "Match": "plejedede",
+      "Message": "Ordet genkendes ikke; overvej 'plejede'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        137,
+        145
+      ],
+      "Start": 951,
+      "Suggestions": [
+        "plejede"
+      ],
+      "context": "tom features i tiden og budget som en off-the-shelf feature plejedede at koste, flipper ROI kalkulusen.\n\nDe store standard software packages — ERP'er",
+      "file": "blog-posts/3x-for-your-money/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.PredicateAgreement",
+      "End": 1570,
+      "Line": 31,
+      "Match": "dygtig",
+      "Message": "Tillægsordet skal passe til 'Modellerne'; overvej 'dygtige'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        90,
+        95
+      ],
+      "Start": 1564,
+      "Suggestions": [
+        "dygtige"
+      ],
+      "context": " andet: ikke meget sker. Teknologien er klar. Modellerne er dygtig. Hvad der er tilbage er bare udførelse — at tage idéer og shippe dem. Ikke mere",
+      "file": "blog-posts/987-prompts-milestone/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.AdjectiveAgreement",
+      "End": 4639,
+      "Line": 93,
+      "Match": "lokal",
+      "Message": "Bøjningen skal passe til 'download'; overvej 'lokalt'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        81,
+        85
+      ],
+      "Start": 4634,
+      "Suggestions": [
+        "lokalt"
+      ],
+      "context": "ignaturen var der. Version og package identity matchede. En lokal download kunne installeres.\n\nMen online-installationen fejlede stadig.\n\n## Den ",
+      "file": "blog-posts/agent-share-msix-auto-updates/da.md",
+      "review": "needs_review",
+      "review_note": "Download: køn i teknisk brug bør vurderes; artiklen og adjektivet skal behandles samlet.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.AdjectiveAgreement",
+      "End": 7513,
+      "Line": 147,
+      "Match": "fuld",
+      "Message": "Bøjningen skal passe til 'download'; overvej 'fuldt'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        112,
+        115
+      ],
+      "Start": 7509,
+      "Suggestions": [
+        "fuldt"
+      ],
+      "context": "MB bidder, samlede den igen og sammenlignede SHA-256 med en fuld download. Filerne var byte-identiske, alle ZIP CRC'er var gyldige, og pakken in",
+      "file": "blog-posts/agent-share-msix-auto-updates/da.md",
+      "review": "needs_review",
+      "review_note": "Download: køn i teknisk brug bør vurderes; artiklen og adjektivet skal behandles samlet.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.AdjectiveAgreement",
+      "End": 9420,
+      "Line": 178,
+      "Match": "fuld",
+      "Message": "Bøjningen skal passe til 'download'; overvej 'fuldt'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        61,
+        64
+      ],
+      "Start": 9416,
+      "Suggestions": [
+        "fuldt"
+      ],
+      "context": "Vores curl A/B-test beviste, at Traefik ændrede bytes på en fuld download. Den beviste ikke, at det var årsagen til Windows-fejlen. Den afgørend",
+      "file": "blog-posts/agent-share-msix-auto-updates/da.md",
+      "review": "needs_review",
+      "review_note": "Download: køn i teknisk brug bør vurderes; artiklen og adjektivet skal behandles samlet.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.Spelling",
+      "End": 6142,
+      "Line": 104,
+      "Match": "bygggede",
+      "Message": "Ordet genkendes ikke; overvej 'byggede'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        51,
+        58
+      ],
+      "Start": 6134,
+      "Suggestions": [
+        "byggede"
+      ],
+      "context": "ness'en.\n\nDen byggede filerne. Den kørte `go mod tidy`. Den bygggede Docker-imaget. Den startede containeren på port 2525. Den affyrede en test-emai",
+      "file": "blog-posts/agent-wrote-the-prompt/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.PredicateAgreement",
+      "End": 2602,
+      "Line": 45,
+      "Match": "simpel",
+      "Message": "Tillægsordet skal passe til 'Konceptet'; overvej 'simpelt'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        15,
+        20
+      ],
+      "Start": 2596,
+      "Suggestions": [
+        "simpelt"
+      ],
+      "context": "lure analysis trin til mine CI/CD pipelines.\n\nKonceptet var simpel. Når en deployment pipeline fejlede, i stedet for bare at logge en fejl, ville ",
+      "file": "blog-posts/agentic-development-2026/da.md",
+      "review": "useful",
+      "review_note": "Konceptet er intetkøn: simpelt.",
+      "retained_from_python": false
+    },
+    {
+      "Check": "Danish.AdjectiveAgreement",
+      "End": 4666,
+      "Line": 65,
+      "Match": "mobile",
+      "Message": "Bøjningen skal passe til 'app'; overvej 'mobil'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        163,
+        168
+      ],
+      "Start": 4660,
+      "Suggestions": [
+        "mobil"
+      ],
+      "context": "er projekt jeg arbejdede på den uge. Nogle gange var det en mobile app. Nogle gange var det infrastruktur. Nogle gange gik ting virkelig galt live",
+      "file": "blog-posts/agentic-development-2026/da.md",
+      "review": "useful",
+      "review_note": "Dansk adjektiv foran app: mobil.",
+      "retained_from_python": false
+    },
+    {
+      "Check": "Danish.AdjectiveAgreement",
+      "End": 595,
+      "Line": 21,
+      "Match": "mobile",
+      "Message": "Bøjningen skal passe til 'app'; overvej 'mobil'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        127,
+        132
+      ],
+      "Start": 589,
+      "Suggestions": [
+        "mobil"
+      ],
+      "context": "ever projekt jeg arbejder på den uge. Nogle gange er det en mobile app. Nogle gange er det infrastruktur. Nogle gange går ting spektakulært galt l",
+      "file": "blog-posts/agentic-live-ritual/da.md",
+      "review": "useful",
+      "review_note": "Dansk adjektiv foran app: mobil.",
+      "retained_from_python": false
+    },
+    {
+      "Check": "Danish.ArticleGender",
+      "End": 203,
+      "Line": 5,
+      "Match": "en",
+      "Message": "'spejl' har itk-køn i COR; overvej 'et'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        111,
+        112
+      ],
+      "Start": 201,
+      "Suggestions": [
+        "et"
+      ],
+      "context": " en stemme jeg ikke skriver i længere. Pointen: profilen er en spejl, ikke en konfiguration — og spejle skal pudses.\"\nlang: \"da\"\ntags: [\"writi",
+      "file": "blog-posts/anmelderen-blev-foraeldet/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.AdjectiveAgreement",
+      "End": 10554,
+      "Line": 164,
+      "Match": "enarmet",
+      "Message": "Bøjningen skal passe til 'tyveknægt'; overvej 'enarmede'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        287,
+        293
+      ],
+      "Start": 10547,
+      "Suggestions": [
+        "enarmede"
+      ],
+      "context": "Jeg har et problem ja, men altså hvem ville ikke hive i den enarmet tyveknægt\" — selvironisk overengagement-ramme, for ofte brugt før. Ind kom tre ",
+      "file": "blog-posts/anmelderen-blev-foraeldet/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.AdjectiveAgreement",
+      "End": 12268,
+      "Line": 186,
+      "Match": "nyttig",
+      "Message": "Bøjningen skal passe til 'signal'; overvej 'nyttigt'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        15,
+        20
+      ],
+      "Start": 12262,
+      "Suggestions": [
+        "nyttigt"
+      ],
+      "context": "eg stadig falder tilbage i den gamle stemme.\n\nBegge dele er nyttig signal. Pointen er at signalet nu kommer fra et spejl der ligner mig i dag, ikk",
+      "file": "blog-posts/anmelderen-blev-foraeldet/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.Spelling",
+      "End": 879,
+      "Line": 23,
+      "Match": "konsolen",
+      "Message": "Ordet genkendes ikke; overvej 'konsollen'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        187,
+        194
+      ],
+      "Start": 871,
+      "Suggestions": [
+        "konsollen"
+      ],
+      "context": "n slags hurtige projekter. ChatGPT for research. Claude web konsolen for når jeg skulle tænke igennem noget. Anthropic's API af omkostningsårsager. ",
+      "file": "blog-posts/anthropic-is-the-big-winner/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.ArticleGender",
+      "End": 1459,
+      "Line": 31,
+      "Match": "et",
+      "Message": "'feature' har fk-køn i COR; overvej 'en'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        97,
+        98
+      ],
+      "Start": 1457,
+      "Suggestions": [
+        "en"
+      ],
+      "context": "lige og switching omkostninger er lave, reliability er ikke et feature. Det er en moat.\n\n---\n\n*Del af #100DaysToOffload dokumentering agentic ",
+      "file": "blog-posts/aspire-self-healing/da.md",
+      "review": "needs_review",
+      "review_note": "Feature: COR-kønnet kan være misvisende for det engelske fagord softwarefeature.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.AdjectiveAgreement",
+      "End": 1388,
+      "Line": 31,
+      "Match": "rigtig",
+      "Message": "Bøjningen skal passe til 'problem'; overvej 'rigtigt'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        173,
+        178
+      ],
+      "Start": 1382,
+      "Suggestions": [
+        "rigtigt"
+      ],
+      "context": "pørge i stedet: \"Tjener det virkelig brugeren? Løser det et rigtig problem? Eller bygger jeg bare fordi jeg kan?\"\n\nDet her er den usmuk del af AI ",
+      "file": "blog-posts/biggest-challenge-what-not-to-build/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.AdjectiveAgreement",
+      "End": 2505,
+      "Line": 48,
+      "Match": "rigtig",
+      "Message": "Bøjningen skal passe til 'produkt'; overvej 'rigtigt'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        36,
+        41
+      ],
+      "Start": 2499,
+      "Suggestions": [
+        "rigtigt"
+      ],
+      "context": " med deres Umbraco setup\n3. Et fundament der kunne blive et rigtig produkt\n\nVar det poleret? Nej. Var det production-ready? Ikke engang tæt på. Me",
+      "file": "blog-posts/build-over-buy/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.Spelling",
+      "End": 6446,
+      "Line": 96,
+      "Match": "plejedede",
+      "Message": "Ordet genkendes ikke; overvej 'plejede'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        195,
+        203
+      ],
+      "Start": 6437,
+      "Suggestions": [
+        "plejede"
+      ],
+      "context": "tom features i tiden og budget som en off-the-shelf feature plejedede at koste, ændrede ROI kalkulusen for custom udvikling fundamentalt.\n\nIkke alle ",
+      "file": "blog-posts/build-over-buy/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.Spelling",
+      "End": 1621,
+      "Line": 35,
+      "Match": "indrømmetede",
+      "Message": "Ordet genkendes ikke; overvej 'indrømmede'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        5,
+        16
+      ],
+      "Start": 1609,
+      "Suggestions": [
+        "indrømmede"
+      ],
+      "context": "ode-changed-everything/assets/shot-01-five-agents.png)\n\nJeg indrømmetede i mit opslag at jeg havde lavet en metodisk fejl: jeg havde startet to eksperim",
+      "file": "blog-posts/claude-code-changed-everything/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.Spelling",
+      "End": 460,
+      "Line": 21,
+      "Match": "plejedede",
+      "Message": "Ordet genkendes ikke; overvej 'plejede'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        22,
+        30
+      ],
+      "Start": 451,
+      "Suggestions": [
+        "plejede"
+      ],
+      "context": "lace koncept for Claude Code plugins.\n\nSkills og kommandoer plejedede at være forskellige ting. Anthropic sammensmeltede dem. Personligt tror jeg de ",
+      "file": "blog-posts/claude-code-plugin-marketplace/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.AdjectiveAgreement",
+      "End": 1604,
+      "Line": 31,
+      "Match": "massivt",
+      "Message": "Bøjningen skal passe til 'business'; overvej 'massiv'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        48,
+        54
+      ],
+      "Start": 1597,
+      "Suggestions": [
+        "massiv"
+      ],
+      "context": "gge verden.\n\nPlugin marketplacen kommer ikke til at være et massivt business. Men det kunne være infrastrukturen der gør den næste bølge af agentic",
+      "file": "blog-posts/claude-code-plugin-marketplace/da.md",
+      "review": "needs_review",
+      "review_note": "Business er indlånt her. Forslaget løser ikke hele nominalleddet; ordvalg og køn kræver review.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.Spelling",
+      "End": 3492,
+      "Line": 57,
+      "Match": "hundredevis",
+      "Message": "Ordet genkendes ikke; overvej 'hundredvis'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        110,
+        120
+      ],
+      "Start": 3481,
+      "Suggestions": [
+        "hundredvis"
+      ],
+      "context": "tainer omkring 23:20 — en `pks brain extract`, der spawnede hundredevis af arbejdere (det er [app-niveau-historien fra samme nat](/da/blog/spawn-narrow",
+      "file": "blog-posts/crashed-my-hetzner-again/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.Spelling",
+      "End": 2117,
+      "Line": 39,
+      "Match": "taxonomi",
+      "Message": "Ordet genkendes ikke; overvej 'taksonomi'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        56,
+        63
+      ],
+      "Start": 2109,
+      "Suggestions": [
+        "taksonomi"
+      ],
+      "context": "ut |\n| `gap_analysis.txt` | `product gap check` | G001–G008 taxonomi (testbar påstand uden TC, manglende rejected alternatives, osv.) — JSON output ",
+      "file": "blog-posts/curated-prompts-are-the-product/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.Spelling",
+      "End": 2664,
+      "Line": 43,
+      "Match": "taxonomi",
+      "Message": "Ordet genkendes ikke; overvej 'taksonomi'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        168,
+        175
+      ],
+      "Start": 2656,
+      "Suggestions": [
+        "taksonomi"
+      ],
+      "context": "en specifik discovery-rækkefølge, en hard gate på close, en taxonomi med kodede severities, en five-section invariant. Det er metodologi som prompt.",
+      "file": "blog-posts/curated-prompts-are-the-product/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.Spelling",
+      "End": 6616,
+      "Line": 93,
+      "Match": "taxonomi",
+      "Message": "Ordet genkendes ikke; overvej 'taksonomi'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        225,
+        232
+      ],
+      "Start": 6608,
+      "Suggestions": [
+        "taksonomi"
+      ],
+      "context": "riant der ved hvornår en ADR er komplet, eller en G001–G008-taxonomi der kan rapportere gaps konsekvent på tværs af projekter. Det er det de syv pro",
+      "file": "blog-posts/curated-prompts-are-the-product/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.AdjectiveAgreement",
+      "End": 7235,
+      "Line": 98,
+      "Match": "fuldgyldigt",
+      "Message": "Bøjningen skal passe til 'substitut'; overvej 'fuldgyldig'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        166,
+        176
+      ],
+      "Start": 7224,
+      "Suggestions": [
+        "fuldgyldig"
+      ],
+      "context": ": **hvad ville DJI Fly-appen selv gøre?** Enumerering er et fuldgyldigt *substitut* for en liste, men det er ikke det samme som at afkode appens egen m",
+      "file": "blog-posts/dji-quicktransfer-file-protocol/da.md",
+      "review": "needs_review",
+      "review_note": "COR angiver fælleskøn for substitut. Kønnet i denne betydning og samspillet med artiklen et kræver sprogfagligt review.",
+      "retained_from_python": false
+    },
+    {
+      "Check": "Danish.Spelling",
+      "End": 543,
+      "Line": 21,
+      "Match": "plejedede",
+      "Message": "Ordet genkendes ikke; overvej 'plejede'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        37,
+        45
+      ],
+      "Start": 534,
+      "Suggestions": [
+        "plejede"
+      ],
+      "context": " kører dem med Aspire.\n\nDet er bemærkelsesværdigt fordi jeg plejedede at hade e2e testing. I traditionel udvikling er det grøntsagerne af software en",
+      "file": "blog-posts/end-to-end-tests/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.Spelling",
+      "End": 920,
+      "Line": 25,
+      "Match": "plejedede",
+      "Message": "Ordet genkendes ikke; overvej 'plejede'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        129,
+        137
+      ],
+      "Start": 911,
+      "Suggestions": [
+        "plejede"
+      ],
+      "context": ". Jeg kører det, ser hvad der fejlede, itererer. Cyklen der plejedede at tage timer tager minutter. Og fordi AI'en nemt kan generere variationer, kan",
+      "file": "blog-posts/end-to-end-tests/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.Spelling",
+      "End": 779,
+      "Line": 21,
+      "Match": "feriuge",
+      "Message": "Ordet genkendes ikke; overvej 'ferieuge'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        150,
+        156
+      ],
+      "Start": 772,
+      "Suggestions": [
+        "ferieuge"
+      ],
+      "context": "å er der en periode hvor de falder til næsten ingenting. En feriuge, ville man antage.\n\nBortset fra at jeg var ikke på ferie. Jeg arbejdede hårdere",
+      "file": "blog-posts/github-heatmap-vacation-day/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.Spelling",
+      "End": 1994,
+      "Line": 39,
+      "Match": "feriuge",
+      "Message": "Ordet genkendes ikke; overvej 'ferieuge'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        50,
+        56
+      ],
+      "Start": 1987,
+      "Suggestions": [
+        "ferieuge"
+      ],
+      "context": "ktivitet.\n\nFor en manager der ser på GitHub stats ville min feriuge se ud som reduceret indsats. For nogen der ved hvad der sker, er det det modsat",
+      "file": "blog-posts/github-heatmap-vacation-day/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.AdjectiveAgreement",
+      "End": 5940,
+      "Line": 112,
+      "Match": "videnskabelig",
+      "Message": "Bøjningen skal passe til 'benchmark'; overvej 'videnskabeligt'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        16,
+        28
+      ],
+      "Start": 5927,
+      "Suggestions": [
+        "videnskabeligt"
+      ],
+      "context": "ge postede det her, så havde den brugt $5.”\n\nDet er ikke en videnskabelig benchmark. Det er en bedre advarsel: En agent kan nå at læse mange filer, itere",
+      "file": "blog-posts/glm-5-2-opencode-pks-cli/da.md",
+      "review": "needs_review",
+      "review_note": "Benchmark: køn og artikel bør vurderes samlet i denne tekniske betydning.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.Spelling",
+      "End": 3226,
+      "Line": 57,
+      "Match": "motorcykelist",
+      "Message": "Ordet genkendes ikke; overvej 'motorcyklist'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        11,
+        23
+      ],
+      "Start": 3213,
+      "Suggestions": [
+        "motorcyklist"
+      ],
+      "context": "ål — det eneste er om vejen derhen var god nok.\"\n\nDer er en motorcykelist metafor jeg brugte: husker du disse videoer af motorcyklister der væver gennem ",
+      "file": "blog-posts/have-i-coded-myself-out-of-a-job/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.ArticleGender",
+      "End": 4155,
+      "Line": 63,
+      "Match": "et",
+      "Message": "'workshop' har fk-køn i COR; overvej 'en'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        205,
+        206
+      ],
+      "Start": 4153,
+      "Suggestions": [
+        "en"
+      ],
+      "context": "ne eksperimenter. Det er ikke en poleret produktion. Det er et workshop. Nogle gange bygger jeg features. Nogle gange debugger jeg i 45 minutt",
+      "file": "blog-posts/have-i-coded-myself-out-of-a-job/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.Spelling",
+      "End": 4277,
+      "Line": 63,
+      "Match": "utrodeligt",
+      "Message": "Ordet genkendes ikke; overvej 'utroligt'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        319,
+        328
+      ],
+      "Start": 4267,
+      "Suggestions": [
+        "utroligt"
+      ],
+      "context": "nge debugger jeg i 45 minutter. Nogle gange gør AI'en noget utrodeligt og vi ser bare.\n\nFormatet virker fordi det er rigtigt. Ingen slides, ingen scri",
+      "file": "blog-posts/have-i-coded-myself-out-of-a-job/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.Spelling",
+      "End": 7456,
+      "Line": 97,
+      "Match": "plejedede",
+      "Message": "Ordet genkendes ikke; overvej 'plejede'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        265,
+        273
+      ],
+      "Start": 7447,
+      "Suggestions": [
+        "plejede"
+      ],
+      "context": "hed til at føle sig ubehagelig mens en maskine gør noget du plejedede at gøre i hånd.*\n\n*Kaninhullet er åbent. Hop ind.*\n\n---\n\n**Series Index:**\n1. [",
+      "file": "blog-posts/have-i-coded-myself-out-of-a-job/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.AdjectiveAgreement",
+      "End": 1911,
+      "Line": 33,
+      "Match": "bedst",
+      "Message": "Bøjningen skal passe til 'værdi'; overvej 'bedste'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        34,
+        38
+      ],
+      "Start": 1906,
+      "Suggestions": [
+        "bedste"
+      ],
+      "context": "l calls faktisk koster dig\n3. Hvilke modeller giver dig den bedst værdi for din workflow\n4. Hvordan man strukturerer prompts for at holde konteks",
+      "file": "blog-posts/installing-cursor-cheaper-than-cline/da.md",
+      "review": "useful",
+      "review_note": "Bestemt adjektiv efter den: bedste.",
+      "retained_from_python": false
+    },
+    {
+      "Check": "Danish.ArticleGender",
+      "End": 2057,
+      "Line": 36,
+      "Match": "Det",
+      "Message": "'kontekst' har fk-køn i COR; overvej 'den'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        1,
+        3
+      ],
+      "Start": 2054,
+      "Suggestions": [
+        "Den"
+      ],
+      "context": "dagede, at hele håndværket var ved at blive transformeret.\n\nDet kontekst betyder noget, fordi historien, jeg er ved at fortælle dig, ikke er \"i",
+      "file": "blog-posts/it-started-at-christmas/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.ArticleGender",
+      "End": 12587,
+      "Line": 213,
+      "Match": "en",
+      "Message": "'issue' har itk-køn i COR; overvej 'et'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        154,
+        155
+      ],
+      "Start": 12585,
+      "Suggestions": [
+        "et"
+      ],
+      "context": "around rundt om projektet, og heller ikke ved kun at skrive en issue. Først gør jeg fejlen reproducerbar. Så viser jeg en lille løsning, der l",
+      "file": "blog-posts/keycloak-cimd-claude-chatgpt/da.md",
+      "review": "needs_review",
+      "review_note": "Issue: låneordets tekniske betydning kræver sprogfaglig vurdering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.ArticleGender",
+      "End": 271,
+      "Line": 5,
+      "Match": "en",
+      "Message": "'benchmark' har itk-køn i COR; overvej 'et'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        160,
+        161
+      ],
+      "Start": 269,
+      "Suggestions": [
+        "et"
+      ],
+      "context": "lligere ved at finde og genbruge GLM's arbejde. Det er ikke en benchmark — det er et interessant agenteksperiment.\"\nlang: \"da\"\ntags:\n  [\"pks-c",
+      "file": "blog-posts/kimi-k3-found-glms-work/da.md",
+      "review": "needs_review",
+      "review_note": "Benchmark: køn i teknisk brug kræver sprogfaglig vurdering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.AdjectiveAgreement",
+      "End": 2535,
+      "Line": 49,
+      "Match": "videnskabelig",
+      "Message": "Bøjningen skal passe til 'benchmark'; overvej 'videnskabeligt'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        30,
+        42
+      ],
+      "Start": 2522,
+      "Suggestions": [
+        "videnskabeligt"
+      ],
+      "context": ".dk/tools som der nævnes.\n```\n\nDet var ikke planlagt som en videnskabelig benchmark. Men jeg forventede alligevel, at Kimi ville løse opgaven nogenlunde ",
+      "file": "blog-posts/kimi-k3-found-glms-work/da.md",
+      "review": "needs_review",
+      "review_note": "Benchmark: køn og artikel bør vurderes samlet i denne tekniske betydning.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.AdjectiveAgreement",
+      "End": 8721,
+      "Line": 174,
+      "Match": "ren",
+      "Message": "Bøjningen skal passe til 'benchmark'; overvej 'rent'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        22,
+        24
+      ],
+      "Start": 8718,
+      "Suggestions": [
+        "rent"
+      ],
+      "context": "t benchmark — og en styrke i arbejdet\n\nHvis formålet var en ren benchmark, var forsøget forurenet. Jeg skulle have brugt to rene worktrees, skj",
+      "file": "blog-posts/kimi-k3-found-glms-work/da.md",
+      "review": "needs_review",
+      "review_note": "Benchmark: køn og artikel bør vurderes samlet i denne tekniske betydning.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.AdjectiveAgreement",
+      "End": 6066,
+      "Line": 85,
+      "Match": "langt",
+      "Message": "Bøjningen skal passe til 'survey'; overvej 'lang'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        52,
+        56
+      ],
+      "Start": 6061,
+      "Suggestions": [
+        "lang"
+      ],
+      "context": "* galt.\n\n![Drift: små fejl per foto akkumulerer hen over et langt survey og bøjer kortet væk fra virkeligheden; løser man alle fotos sammen med G",
+      "file": "blog-posts/kortet-jeg-altid-ville-bygge/da.md",
+      "review": "needs_review",
+      "review_note": "COR angiver fælleskøn for survey; fagets brug om et fotogrammetrisk forløb kræver review.",
+      "retained_from_python": false
+    },
+    {
+      "Check": "Danish.AdjectiveAgreement",
+      "End": 6308,
+      "Line": 87,
+      "Match": "langt",
+      "Message": "Bøjningen skal passe til 'survey'; overvej 'lang'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        62,
+        66
+      ],
+      "Start": 6303,
+      "Suggestions": [
+        "lang"
+      ],
+      "context": "Figur 3 — Drift. Små fejl per foto hober sig op hen over et langt survey og bøjer det rekonstruerede kort væk fra virkeligheden. At løse alle fot",
+      "file": "blog-posts/kortet-jeg-altid-ville-bygge/da.md",
+      "review": "needs_review",
+      "review_note": "COR angiver fælleskøn for survey; fagets brug om et fotogrammetrisk forløb kræver review.",
+      "retained_from_python": false
+    },
+    {
+      "Check": "Danish.ArticleGender",
+      "End": 8343,
+      "Line": 110,
+      "Match": "en",
+      "Message": "'facit' har itk-køn i COR; overvej 'et'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        116,
+        117
+      ],
+      "Start": 8341,
+      "Suggestions": [
+        "et"
+      ],
+      "context": "re resultat af præcis det samme datasæt at måle op imod** — en facit at lægge mit eget resultat oven på. Det betyder at jeg altid kan sige *hv",
+      "file": "blog-posts/kortet-jeg-altid-ville-bygge/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.ArticleGender",
+      "End": 8462,
+      "Line": 110,
+      "Match": "den",
+      "Message": "'facit' har itk-køn i COR; overvej 'det'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        234,
+        236
+      ],
+      "Start": 8459,
+      "Suggestions": [
+        "det"
+      ],
+      "context": "t jeg altid kan sige *hvor tæt* hvert eksperiment kom. Uden den facit ville jeg flyve blindt: en pipeline der ikke kan måle sin egen fejl er ba",
+      "file": "blog-posts/kortet-jeg-altid-ville-bygge/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.AdjectiveAgreement",
+      "End": 520,
+      "Line": 23,
+      "Match": "specifik",
+      "Message": "Bøjningen skal passe til 'workflow'; overvej 'specifikt'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        81,
+        88
+      ],
+      "Start": 512,
+      "Suggestions": [
+        "specifikt"
+      ],
+      "context": "emmeligheden er. Der er ingen hemmelighed virkelig. Bare en specifik workflow, der er blevet automatisk.\n\nDu har en prompt-template, der dækker alle",
+      "file": "blog-posts/landing-pages-5-minutes-secret-sauce/da.md",
+      "review": "partial",
+      "review_note": "Specifikt passer til workflow i COR, men artiklen en skal også vurderes/rettes.",
+      "retained_from_python": false
+    },
+    {
+      "Check": "Danish.AdjectiveAgreement",
+      "End": 950,
+      "Line": 29,
+      "Match": "dygtig",
+      "Message": "Bøjningen skal passe til 'værktøjer'; overvej 'dygtige'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        67,
+        72
+      ],
+      "Start": 944,
+      "Suggestions": [
+        "dygtige"
+      ],
+      "context": "stighed er ikke magi. Det er mønster-genkendelse, der møder dygtig værktøjer, der møder klar tænkning omkring hvad du ønsker.\n\nDet hemmeligt udgør",
+      "file": "blog-posts/landing-pages-5-minutes-secret-sauce/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.ArticleGender",
+      "End": 2499,
+      "Line": 60,
+      "Match": "En",
+      "Message": "'download' har itk-køn i COR; overvej 'et'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        38,
+        39
+      ],
+      "Start": 2497,
+      "Suggestions": [
+        "Et"
+      ],
+      "context": "millioner på 30 dage.\n\nMan skal være forsigtig med npm-tal. En download er ikke et menneske. CI-kørsler, caches og transitive afhængigheder tæ",
+      "file": "blog-posts/mcp-har-vundet/da.md",
+      "review": "needs_review",
+      "review_note": "Download: tjek norm og etableret kønsbrug i teknisk dansk.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.PredicateAgreement",
+      "End": 11692,
+      "Line": 222,
+      "Match": "færdig",
+      "Message": "Tillægsordet skal passe til 'vinduet'; overvej 'færdigt'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        266,
+        271
+      ],
+      "Start": 11686,
+      "Suggestions": [
+        "færdigt"
+      ],
+      "context": "s egen test fejlede falsk, fordi den målte, før vinduet var færdig med at skifte størrelse.\n- **Opus** målte, at baggrundslyset »teleporterede« ve",
+      "file": "blog-posts/motion-hype-new-director/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.ArticleGender",
+      "End": 6653,
+      "Line": 113,
+      "Match": "et",
+      "Message": "'ask' har fk-køn i COR; overvej 'en'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        185,
+        186
+      ],
+      "Start": 6651,
+      "Suggestions": [
+        "en"
+      ],
+      "context": "smålet ikke længere »kan den bygge det«. Det er »hvor stort et ask tør jeg give den næste gang«.\n\n---\n\n*Del af #100DaysToOffload — dokumenteri",
+      "file": "blog-posts/one-prompt-a-whole-team/da.md",
+      "review": "wrong",
+      "review_note": "»ask« er engelsk for en anmodning/opgave her. Motoren anvender det danske trænavns køn.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.ArticleGender",
+      "End": 132,
+      "Line": 6,
+      "Match": "Det",
+      "Message": "'smiley' har fk-køn i COR; overvej 'den'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        15,
+        17
+      ],
+      "Start": 129,
+      "Suggestions": [
+        "Den"
+      ],
+      "context": "ate: \"2025-12-22\"\nlinkedin_date: \"2025-12-07\"\ndescription: \"Det smiley tager kanten af, men budskabet er seriøst.\"\nlang: \"da\"\nseries: \"vibe-cod",
+      "file": "blog-posts/one-year-vibe-coding/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.ArticleGender",
+      "End": 385,
+      "Line": 21,
+      "Match": "Det",
+      "Message": "'smiley' har fk-køn i COR; overvej 'den'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        1,
+        3
+      ],
+      "Start": 382,
+      "Suggestions": [
+        "Den"
+      ],
+      "context": ": 8\nbanner_hash: 83c6ef20\n---\n\nBølgen kommer — er du klar?\n\nDet smiley tager kanten af, men budskabet er seriøst.\n\nVibe coding er ikke længere ",
+      "file": "blog-posts/one-year-vibe-coding/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.ArticleGender",
+      "End": 4376,
+      "Line": 87,
+      "Match": "et",
+      "Message": "'selfie' har fk-køn i COR; overvej 'en'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        224,
+        225
+      ],
+      "Start": 4374,
+      "Suggestions": [
+        "en"
+      ],
+      "context": "den ene præposition der gør den til en pentest i stedet for et selfie: *fra hvor*.\n\nEn pentest fra inden for perimeteren er ikke en pentest. D",
+      "file": "blog-posts/pentesten-der-ikke-var/da.md",
+      "review": "useful",
+      "review_note": "Selfie har fælleskøn i COR: en selfie.",
+      "retained_from_python": false
+    },
+    {
+      "Check": "Danish.AdjectiveAgreement",
+      "End": 8038,
+      "Line": 165,
+      "Match": "almindelig",
+      "Message": "Bøjningen skal passe til 'setup'; overvej 'almindeligt'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        147,
+        156
+      ],
+      "Start": 8028,
+      "Suggestions": [
+        "almindeligt"
+      ],
+      "context": "gen*, men nu uden `PKS_DISCOVERY`. Photographer ser bare en almindelig setup med environment-variabler. Den ved intet om at den blev opdaget. Den ved ",
+      "file": "blog-posts/pks-cli-discovery-protocol/da.md",
+      "review": "needs_review",
+      "review_note": "Setup: substantivets køn og artiklen bør behandles samlet.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.ArticleGender",
+      "End": 3322,
+      "Line": 58,
+      "Match": "det",
+      "Message": "'dag' har fk-køn i COR; overvej 'den'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        72,
+        74
+      ],
+      "Start": 3319,
+      "Suggestions": [
+        "den"
+      ],
+      "context": "stadig et `--provider`-flag, men det er en escape hatch til det dag hvor to providers begge påstår at de kan servere `gpt-image-1` (Foundry og ",
+      "file": "blog-posts/pks-image-gpt-image-2/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.AdjectiveAgreement",
+      "End": 2193,
+      "Line": 23,
+      "Match": "ærlig",
+      "Message": "Bøjningen skal passe til 'argument'; overvej 'ærligt'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        74,
+        78
+      ],
+      "Start": 2188,
+      "Suggestions": [
+        "ærligt"
+      ],
+      "context": "r af spec](../levels-of-spec/da.md)** — Slutkapitlet, og en ærlig argument: PRD, BDD, typed graph — tre niveauer af spec. Spørgsmålet er ikke hvi",
+      "file": "blog-posts/product-cli-journey/da.md",
+      "review": "partial",
+      "review_note": "Ærlig → ærligt er relevant, men artiklen mangler: hele rettelsen er »et ærligt argument«.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.ArticleGender",
+      "End": 1580,
+      "Line": 31,
+      "Match": "Det",
+      "Message": "'realisering' har fk-køn i COR; overvej 'den'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        1,
+        3
+      ],
+      "Start": 1577,
+      "Suggestions": [
+        "Den"
+      ],
+      "context": " ikke væsentligt værre output end Sonnet eller Gemini Pro.\n\nDet realisering ændrede, hvordan jeg tænker omkring hele det her. Det sprængte anta",
+      "file": "blog-posts/quiet-period-just-productive/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.ArticleGender",
+      "End": 3685,
+      "Line": 53,
+      "Match": "en",
+      "Message": "'upload' har itk-køn i COR; overvej 'et'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        277,
+        278
+      ],
+      "Start": 3683,
+      "Suggestions": [
+        "et"
+      ],
+      "context": "t skin over filsystemet. Men jeg vil have et **signal** når en upload er færdig — ikke når den starter, ikke når der bliver skrevet bytes, men",
+      "file": "blog-posts/sony-a7-ftp/da.md",
+      "review": "needs_review",
+      "review_note": "Upload: tjek norm og etableret kønsbrug i teknisk dansk.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.Spelling",
+      "End": 1953,
+      "Line": 30,
+      "Match": "plejedede",
+      "Message": "Ordet genkendes ikke; overvej 'plejede'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        264,
+        272
+      ],
+      "Start": 1944,
+      "Suggestions": [
+        "plejede"
+      ],
+      "context": "hed til at føle sig ubehagelig mens en maskine gør noget du plejedede at gøre i hånd.\n\nKaninhullet er åbent.\n\nVelkommen.\n\n---\n\n*Dette opslag lancerer",
+      "file": "blog-posts/starting-100daystooffload/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.AdjectiveAgreement",
+      "End": 1325,
+      "Line": 31,
+      "Match": "klart",
+      "Message": "Bøjningen skal passe til 'kontekst'; overvej 'klar'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        19,
+        23
+      ],
+      "Start": 1320,
+      "Suggestions": [
+        "klar"
+      ],
+      "context": "n frameworks. Intet meta-lag af tooling.\n\nBare: god intent, klart kontekst, og lade AI'en arbejde.\n\nHvad jeg indser er at bottlenecken ikke er me",
+      "file": "blog-posts/template-less-development/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.AdjectiveAgreement",
+      "End": 1801,
+      "Line": 30,
+      "Match": "rigtig",
+      "Message": "Bøjningen skal passe til 'skift'; overvej 'rigtigt'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        41,
+        46
+      ],
+      "Start": 1795,
+      "Suggestions": [
+        "rigtigt"
+      ],
+      "context": "b app-æraen forbi?\n\nNok ikke helt. Men jeg tror der sker en rigtig skift. Når flaskehalsen bliver kognitiv load—når du prøver at koordinere mellem",
+      "file": "blog-posts/terminal-renaissance/da.md",
+      "review": "partial",
+      "review_note": "Rigtigt passer til skift, men en skal også rettes til et.",
+      "retained_from_python": false
+    },
+    {
+      "Check": "Danish.Spelling",
+      "End": 2993,
+      "Line": 47,
+      "Match": "gravitiserede",
+      "Message": "Ordet genkendes ikke; overvej 'graviterede'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        15,
+        27
+      ],
+      "Start": 2980,
+      "Suggestions": [
+        "graviterede"
+      ],
+      "context": " til stede i `/boot`. `grub.cfg` ser fin ud.\n\nHypotesen jeg gravitiserede mod: et par uger forinden havde `apt` installeret en ny kerne, som boxen aldrig",
+      "file": "blog-posts/the-box-wont-boot/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.AdjectiveAgreement",
+      "End": 1788,
+      "Line": 34,
+      "Match": "halv",
+      "Message": "Bøjningen skal passe til 'minut'; overvej 'halvt'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        8,
+        11
+      ],
+      "Start": 1784,
+      "Suggestions": [
+        "halvt"
+      ],
+      "context": "KB — 422 linjer, længste linje 156 tegn. Ingenting.\n\nTre en halv minut senere brugte den processen 20 GB RAM og voksede stadig lineært.\n\n## Min ",
+      "file": "blog-posts/the-grep-that-wasnt-grep/da.md",
+      "review": "partial",
+      "review_note": "Halv → halvt peger på kønsfejlen, men hele udtrykket skal være »tre et halvt minut«.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.AdjectiveAgreement",
+      "End": 5573,
+      "Line": 85,
+      "Match": "rigtigt",
+      "Message": "Bøjningen skal passe til 'feature'; overvej 'rigtig'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        240,
+        246
+      ],
+      "Start": 5566,
+      "Suggestions": [
+        "rigtig"
+      ],
+      "context": " 108 GB workspace, ingen uendelig løkke. Den researchede et rigtigt feature, hentede rigtige primærkilder — Fletcher-artiklen fra det australske ak",
+      "file": "blog-posts/the-grep-that-wasnt-grep/da.md",
+      "review": "needs_review",
+      "review_note": "Feature: COR-kønnet kan være misvisende for det engelske fagord softwarefeature.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.AdjectiveAgreement",
+      "End": 3089,
+      "Line": 49,
+      "Match": "lokal",
+      "Message": "Bøjningen skal passe til 'setup'; overvej 'lokalt'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        122,
+        126
+      ],
+      "Start": 3084,
+      "Suggestions": [
+        "lokalt"
+      ],
+      "context": "v hvad du ønsker, få arbejdende software, deploy det. Ingen lokal setup. Ingen afhængig-styring. Intet \"virker på min maskine.\" Bare idéer, der b",
+      "file": "blog-posts/the-hackathon-era/da.md",
+      "review": "partial",
+      "review_note": "Lokalt passer til setup, men ingen skal også rettes til intet.",
+      "retained_from_python": false
+    },
+    {
+      "Check": "Danish.AdjectiveAgreement",
+      "End": 4005,
+      "Line": 61,
+      "Match": "uforglemmelig",
+      "Message": "Bøjningen skal passe til 'øjeblik'; overvej 'uforglemmeligt'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        16,
+        28
+      ],
+      "Start": 3992,
+      "Suggestions": [
+        "uforglemmeligt"
+      ],
+      "context": "var.\n\n## Anthropic's Prissætnings Puslespil\n\nEt mindre, men uforglemmelig øjeblik: Anthropic annoncerede \"ubegrænset\" brugs-planer, og internettet begynd",
+      "file": "blog-posts/the-hackathon-era/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.AdjectiveAgreement",
+      "End": 2073,
+      "Line": 45,
+      "Match": "offentlig",
+      "Message": "Bøjningen skal passe til 'ansvar'; overvej 'offentligt'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        40,
+        48
+      ],
+      "Start": 2064,
+      "Suggestions": [
+        "offentligt"
+      ],
+      "context": "h dem over stregen.\n\nJeg annoncerede det på LinkedIn, fordi offentlig ansvar er det eneste ansvar, der virker for mig.\n\n## Seks Timer\n\nJeg kunne godt",
+      "file": "blog-posts/the-may-challenge/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.ArticleGender",
+      "End": 6762,
+      "Line": 93,
+      "Match": "et",
+      "Message": "'milepæl' har fk-køn i COR; overvej 'en'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        61,
+        62
+      ],
+      "Start": 6760,
+      "Suggestions": [
+        "en"
+      ],
+      "context": "*Næste: [1000 Prompts →](./04-1000-prompts.md) — Når du når et milepæl, finder plateauet, og indser, at teknologien var klar før industrien.*\n",
+      "file": "blog-posts/the-may-challenge/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.Spelling",
+      "End": 765,
+      "Line": 25,
+      "Match": "glamorøst",
+      "Message": "Ordet genkendes ikke; overvej 'glamourøst'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        218,
+        226
+      ],
+      "Start": 756,
+      "Suggestions": [
+        "glamourøst"
+      ],
+      "context": "overy* fasen var over. Hvad erstattede det var noget mindre glamorøst og mere produktivt: applied routine.\n\n## Når Revolution Bliver Rutine\n\nOvergang",
+      "file": "blog-posts/the-plateau/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.AdjectiveAgreement",
+      "End": 2060,
+      "Line": 41,
+      "Match": "godt",
+      "Message": "Bøjningen skal passe til 'kontekst'; overvej 'god'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        338,
+        341
+      ],
+      "Start": 2056,
+      "Suggestions": [
+        "god"
+      ],
+      "context": "— men den fundamentale tilgang var den samme. Gode prompts, godt kontekst, god iteration.\n\n**Teamet begyndte at bemærke det.** Kollegaer der hav",
+      "file": "blog-posts/the-plateau/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.RepeatedWord",
+      "End": 2763,
+      "Line": 47,
+      "Match": "ved",
+      "Message": "'ved' står to gange i træk; kontrollér gentagelsen.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        151,
+        153
+      ],
+      "Start": 2760,
+      "Suggestions": [],
+      "context": "ormede sammenlignelig med dyre når den fik nok regler — ved ved at bevise sig selv. Projekt efter projekt fandt jeg at investering i klare regl",
+      "file": "blog-posts/the-plateau/da.md",
+      "review": "useful",
+      "review_note": "Den dobbelte forekomst i ved ved at bevise er overflødig.",
+      "retained_from_python": false
+    },
+    {
+      "Check": "Danish.ArticleGender",
+      "End": 3986,
+      "Line": 65,
+      "Match": "en",
+      "Message": "'menneske' har itk-køn i COR; overvej 'et'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        71,
+        72
+      ],
+      "Start": 3984,
+      "Suggestions": [
+        "et"
+      ],
+      "context": " af linjen mellem \"lad AI handle det\" og \"det her skal have en menneske\"\n\n![At fodre agenten med klare regler i en .clinerules-mappe — regler ",
+      "file": "blog-posts/the-plateau/da.md",
+      "review": "useful",
+      "review_note": "Menneske har intetkøn: et menneske.",
+      "retained_from_python": false
+    },
+    {
+      "Check": "Danish.AdjectiveAgreement",
+      "End": 4625,
+      "Line": 71,
+      "Match": "menneskelig",
+      "Message": "Bøjningen skal passe til 'område'; overvej 'menneskeligt'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        42,
+        52
+      ],
+      "Start": 4614,
+      "Suggestions": [
+        "menneskeligt"
+      ],
+      "context": "*skulle* bygges).\n\nJudgment delen var — og er stadig — fast menneskelig område.\n\n![Skrevet med Claude, men nøje gennemgået linje for linje af Cloudflar",
+      "file": "blog-posts/the-plateau/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.AdjectiveAgreement",
+      "End": 5542,
+      "Line": 81,
+      "Match": "Enormt",
+      "Message": "Bøjningen skal passe til 'gevinst'; overvej 'enorm'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        254,
+        259
+      ],
+      "Start": 5536,
+      "Suggestions": [
+        "Enorm"
+      ],
+      "context": "re: gevinsten afhang helt af hvad du målte. Linjer af kode? Enormt gevinst. Shipper features? Moderat gevinst. Business outcomes? Stadig uklart.\n\n",
+      "file": "blog-posts/the-plateau/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.Spelling",
+      "End": 4805,
+      "Line": 52,
+      "Match": "hundredevis",
+      "Message": "Ordet genkendes ikke; overvej 'hundredvis'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        392,
+        402
+      ],
+      "Start": 4794,
+      "Suggestions": [
+        "hundredvis"
+      ],
+      "context": "ede Aspire over seks måneder — og kassen ender med at holde hundredevis af døde containere, hver med sit eget skrivbare lag og en klynge tilknyttede vo",
+      "file": "blog-posts/thought-id-been-hacked/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.ArticleGender",
+      "End": 10924,
+      "Line": 102,
+      "Match": "en",
+      "Message": "'download' har itk-køn i COR; overvej 'et'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        182,
+        183
+      ],
+      "Start": 10922,
+      "Suggestions": [
+        "et"
+      ],
+      "context": "li. \"Open weight\" var på det tidspunkt en annoncering, ikke en download.\n\nOg påstanden om, at Kimi K3 generelt er bedre end Claude Fable 5, ka",
+      "file": "blog-posts/tigerspring-model-market/da.md",
+      "review": "needs_review",
+      "review_note": "Download: tjek norm og etableret kønsbrug i teknisk dansk.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.ArticleGender",
+      "End": 901,
+      "Line": 22,
+      "Match": "en",
+      "Message": "'login' har itk-køn i COR; overvej 'et'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        413,
+        414
+      ],
+      "Start": 899,
+      "Suggestions": [
+        "et"
+      ],
+      "context": "lle bare have et sted hvor mine egne images kunne ligge bag en login.\n\nSå jeg skrev til min agent: »kan vi forske lidt i hvor nemt vi kan bygg",
+      "file": "blog-posts/tractor-registry/da.md",
+      "review": "needs_review",
+      "review_note": "Login: norm og kønsbrug bør vurderes i sammenhængen.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.AdjectiveAgreement",
+      "End": 980,
+      "Line": 28,
+      "Match": "rigtig",
+      "Message": "Bøjningen skal passe til 'produkt'; overvej 'rigtigt'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        36,
+        41
+      ],
+      "Start": 974,
+      "Suggestions": [
+        "rigtigt"
+      ],
+      "context": " med deres Umbraco setup\n3. Et fundament der kunne blive et rigtig produkt\n\nVar det poleret? Nej. Production-ready? Ikke engang tæt på. Men vi gik",
+      "file": "blog-posts/umbraco-hackday/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.ArticleGender",
+      "End": 1052,
+      "Line": 28,
+      "Match": "den",
+      "Message": "'kaos' har itk-køn i COR; overvej 'det'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        118,
+        120
+      ],
+      "Start": 1049,
+      "Suggestions": [
+        "det"
+      ],
+      "context": "Jeg surfede stadig på bølgen af opdagelser, sideløbende med den kaos jeg lavede når koden spiralede ud af kontrol, lærte at kombinere Bolt med ",
+      "file": "blog-posts/verbos-76-100x-developer/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.Spelling",
+      "End": 2658,
+      "Line": 65,
+      "Match": "brusebaddet",
+      "Message": "Ordet genkendes ikke; overvej 'brusebadet'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        222,
+        232
+      ],
+      "Start": 2647,
+      "Suggestions": [
+        "brusebadet"
+      ],
+      "context": "mig et mål: 52 MCP-servere på 52 uger—en om ugen. Idéer fra brusebaddet bliver til servere.\n\n**4. Dynamisk UI on-demand er næste grænse.** [(54:00)](t:",
+      "file": "blog-posts/verbos-92-claude-code-agent-swarms/da.md",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering.",
+      "retained_from_python": true
+    },
+    {
+      "Check": "Danish.AdjectiveAgreement",
+      "End": 1603,
+      "Line": 29,
+      "Match": "kontinuerlig",
+      "Message": "Bøjningen skal passe til 'flow'; overvej 'kontinuerligt'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        182,
+        193
+      ],
+      "Start": 1591,
+      "Suggestions": [
+        "kontinuerligt"
+      ],
+      "context": "ekte til design fodrer direkte til implementering, alt i en kontinuerlig flow. Det er det produkt gap alle forsøgt at fylde lige nu.\n\nHvis jeg var en fr",
+      "file": "blog-posts/vibecoding-101-multitask/da.md",
+      "review": "partial",
+      "review_note": "Kontinuerligt passer til flow, men artiklen en skal også vurderes/rettes.",
+      "retained_from_python": false
+    },
+    {
+      "Check": "Danish.AfterModal",
+      "End": 992,
+      "Line": 23,
+      "Match": "trigger",
+      "Message": "Efter 'skal' forventes infinitiv; overvej 'trigge'.",
+      "Severity": "warning",
+      "Source": "COR / Stavekontrolden / DDT",
+      "Span": [
+        148,
+        154
+      ],
+      "Start": 985,
+      "Suggestions": [
+        "trigge"
+      ],
+      "context": "altid, og vedligeholder state omkring build uden at du skal trigger det manuelt. En agent kan ikke se det interface. Det skal stole på console outp",
+      "file": "blog-posts/what-i-wouldnt-code/da.md",
+      "review": "needs_review",
+      "review_note": "Trigger kan være et bevidst engelsk verbum; overvej trigge/udløse, men ikke en entydig automatisk rettelse.",
+      "retained_from_python": true
+    }
+  ],
+  "lost_findings": [
+    {
+      "Check": "Danish.ArticleGender",
+      "Severity": "warning",
+      "Message": "'indsats' har fk-køn i COR; overvej 'den'.",
+      "Line": 27,
+      "Span": [
+        62,
+        64
+      ],
+      "Match": "det",
+      "Suggestions": [
+        "den"
+      ],
+      "Source": "COR 1.5.1.0 / Stavekontrolden 2.9.101",
+      "Start": 960,
+      "End": 963,
+      "file": "blog-posts/4-hours-debugging-no-help/da.md",
+      "context": "e.\n\nFire timer af at prøve er et rimelig stoppunkt. Du har givet det indsats. Du har prøvet forskellige tilgange. På et punkt, yderligere indsats giver f",
+      "review": "needs_review",
+      "review_note": "Det er uklart, om forfatteren mener »den indsats« eller »givet det en indsats«. Forslaget afgør ikke meningen."
+    },
+    {
+      "Check": "Danish.AdjectiveAgreement",
+      "Severity": "warning",
+      "Message": "Bøjningen skal passe til 'intuition'; overvej 'ren'.",
+      "Line": 25,
+      "Span": [
+        144,
+        147
+      ],
+      "Match": "rent",
+      "Suggestions": [
+        "ren"
+      ],
+      "Source": "COR 1.5.1.0 / Stavekontrolden 2.9.101",
+      "Start": 775,
+      "End": 779,
+      "file": "blog-posts/chatgpt-copy-paste-vs-ide/da.md",
+      "context": "er overbevist om, at det ikke er en langsigtet spiller. Dette er rent intuition baseret på hvad jeg ser på markedet lige nu.\n\nHvorfor ville de købe det?\n\n",
+      "review": "useful",
+      "review_note": "Relevant lokal stavnings- eller bøjningsrettelse; resten af sætningen kan stadig kræve redigering."
+    },
+    {
+      "Check": "Danish.AdjectiveAgreement",
+      "Severity": "warning",
+      "Message": "Bøjningen skal passe til 'processen'; overvej 'sjove'.",
+      "Line": 29,
+      "Span": [
+        78,
+        82
+      ],
+      "Match": "sjovt",
+      "Suggestions": [
+        "sjove"
+      ],
+      "Source": "COR 1.5.1.0 / Stavekontrolden 2.9.101",
+      "Start": 1471,
+      "End": 1476,
+      "file": "blog-posts/end-to-end-tests/da.md",
+      "context": "fra at se e2e tests som en nødvendig ond til faktisk at gøre det sjovt processen. Det er ikke et lille shift. Det er tegnet på at en fundamental constraint",
+      "review": "wrong",
+      "review_note": "»gøre det sjovt processen« er fejlbehæftet, men »sjove« er en forkert løsning. Omskriv fx til »gøre processen sjov«."
+    }
+  ]
+}

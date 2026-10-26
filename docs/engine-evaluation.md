@@ -1,4 +1,8 @@
-# Motorvalg efter anden afprøvning
+# Motorvalg: historisk Python-afprøvning
+
+Dette dokument beskriver Python-alphaen ved `a8bf898`. Beslutningen om at
+beholde Python er erstattet af [Rust-porteringen](rust-migration.md).
+Den aktive implementering findes i `src/` og kører uden Python.
 
 Den oprindelige Vale-pakke fandt ingen fejl med standardprofilen i 179
 blogindlæg. Terminologipakken gav 84 advarsler om `features`/`workflow`.
