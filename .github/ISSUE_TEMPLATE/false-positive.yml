@@ -1,0 +1,29 @@
+name: En forkert advarsel
+description: Hjælp os med at fjerne støj. Du behøver ikke kunne kode.
+title: 'Forkert advarsel: '
+labels: [bug]
+body:
+  - type: textarea
+    id: example
+    attributes:
+      label: Sætningen og advarslen
+      description: Indsæt et kort, anonymiseret eksempel og regel-id, hvis du har det. Issues er offentlige.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Hvad burde værktøjet have gjort?
+      description: Forklar gerne hvorfor formuleringen er korrekt. En kilde er velkommen, men ikke et krav.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version eller commit og kommando
+  - type: checkboxes
+    id: reuse
+    attributes:
+      label: Må vi genbruge eksemplet?
+      options:
+        - label: Mit eksempel må indgå i projektets offentlige tests under MIT-licensen.

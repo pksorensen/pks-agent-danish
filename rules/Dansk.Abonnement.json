@@ -1,0 +1,59 @@
+{
+  "id": "Dansk.Abonnement",
+  "category": "spelling",
+  "status": "starter",
+  "summary": "Skriv 'abonnement' frem for 'abonnoment'.",
+  "explanation": "Reglen fanger den afgrænsede fejlstavning 'abonnoment' og foreslår 'abonnement'. Den er ikke en fuld stavekontrol og forsøger ikke at gætte andre bøjningsformer.",
+  "source": "https://ro.dsn.dk/",
+  "source_note": "Retskrivningsordbogen: opslag 'abonnement'. Reglen og eksemplerne er selvstændigt skrevet; ingen ordbogsdata er kopieret.",
+  "exceptions": [
+    "Citater og omtale af selve fejlstavningen kan undtages lokalt. Egennavne kan kræve en lokal undtagelse."
+  ],
+  "autofix": false,
+  "cases": [
+    {
+      "text": "Du kan købe et abonnoment.",
+      "matches": [
+        "abonnoment"
+      ]
+    },
+    {
+      "text": "Du kan købe et ABONNOMENT.",
+      "matches": [
+        "ABONNOMENT"
+      ]
+    },
+    {
+      "text": "Du kan købe et abonnement.",
+      "matches": []
+    },
+    {
+      "text": "Abonnenterne får besked.",
+      "matches": []
+    },
+    {
+      "text": "Brug `abonnoment` i eksemplet.",
+      "matches": []
+    },
+    {
+      "text": "Et eksempel:\n\n```text\nDu kan købe et abonnoment.\n```\n\nHer slutter eksemplet.",
+      "matches": []
+    },
+    {
+      "text": "# Du kan købe et abonnoment.",
+      "matches": [
+        "abonnoment"
+      ]
+    },
+    {
+      "text": "<!-- vale Dansk.Abonnement = NO -->\nDu kan købe et abonnoment.\n<!-- vale Dansk.Abonnement = YES -->\n\nDu kan købe et abonnoment.",
+      "matches": [
+        "abonnoment"
+      ]
+    },
+    {
+      "text": "æabonnomentø",
+      "matches": []
+    }
+  ]
+}

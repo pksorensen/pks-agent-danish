@@ -1,0 +1,55 @@
+{
+  "id": "KlartSprog.MedHenblikPaa",
+  "category": "style",
+  "status": "starter",
+  "summary": "Overvej at gøre formålet mere direkte.",
+  "explanation": "Frasen 'med henblik på' kan ofte omskrives til 'for at', men resten af sætningen skal tilpasses. 'Med henblik på salg' kan eksempelvis kræve 'for at sælge'. Frasen er grammatisk korrekt.",
+  "source": "docs/style-decisions.md#klart-sprog",
+  "source_note": "Lokal, dokumenteret stilbeslutning; ikke en officiel retskrivningsregel.",
+  "exceptions": [
+    "Bevar formuleringen, når den præciserer et fagligt eller juridisk formål."
+  ],
+  "autofix": false,
+  "cases": [
+    {
+      "text": "Vi mødes med henblik på at planlægge arbejdet.",
+      "matches": [
+        "med henblik på"
+      ]
+    },
+    {
+      "text": "Vi mødes MED HENBLIK PÅ at planlægge arbejdet.",
+      "matches": [
+        "MED HENBLIK PÅ"
+      ]
+    },
+    {
+      "text": "Vi mødes for at planlægge arbejdet.",
+      "matches": []
+    },
+    {
+      "text": "Vi arbejder med planen.",
+      "matches": []
+    },
+    {
+      "text": "Brug `med henblik på` i eksemplet.",
+      "matches": []
+    },
+    {
+      "text": "Et eksempel:\n\n```text\nVi mødes med henblik på at planlægge arbejdet.\n```\n\nHer slutter eksemplet.",
+      "matches": []
+    },
+    {
+      "text": "# Vi mødes med henblik på at planlægge arbejdet.",
+      "matches": [
+        "med henblik på"
+      ]
+    },
+    {
+      "text": "<!-- vale KlartSprog.MedHenblikPaa = NO -->\nVi mødes med henblik på at planlægge arbejdet.\n<!-- vale KlartSprog.MedHenblikPaa = YES -->\n\nVi mødes med henblik på at planlægge arbejdet.",
+      "matches": [
+        "med henblik på"
+      ]
+    }
+  ]
+}

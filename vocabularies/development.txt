@@ -1,0 +1,24 @@
+# Optional vocabulary for Danish software-development prose.
+# These are accepted domain terms, not spelling corrections or general Danish norms.
+agentic
+vibecoding
+devcontainer
+devcontainers
+ultracode
+codebase
+codebases
+frontend
+backend
+preflight
+webhook
+webhooks
+worktree
+worktrees
+subagent
+subagents
+subagenter
+subagenternes
+tokenizer
+tokenizers
+refactor
+refactoring

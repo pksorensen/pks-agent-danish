@@ -1,0 +1,55 @@
+{
+  "id": "Agentics.Features",
+  "category": "terminology",
+  "status": "starter",
+  "summary": "Brug dansk produktterminologi i kundevendt tekst.",
+  "explanation": "Agentics-profilen foretrækker 'funktioner' frem for 'features' i dansk kundevendt tekst. Det er en lokal terminologibeslutning og ingen generel påstand om korrekt dansk.",
+  "source": "docs/style-decisions.md#agentics",
+  "source_note": "Lokal, dokumenteret stilbeslutning; ikke en officiel retskrivningsregel.",
+  "exceptions": [
+    "Produktnavne, citater og engelske passager kan beholde ordet."
+  ],
+  "autofix": false,
+  "cases": [
+    {
+      "text": "Se alle vores features.",
+      "matches": [
+        "features"
+      ]
+    },
+    {
+      "text": "Se alle vores FEATURES.",
+      "matches": [
+        "FEATURES"
+      ]
+    },
+    {
+      "text": "Se alle vores funktioner.",
+      "matches": []
+    },
+    {
+      "text": "Produktet er klar til lancering.",
+      "matches": []
+    },
+    {
+      "text": "Brug `features` i eksemplet.",
+      "matches": []
+    },
+    {
+      "text": "Et eksempel:\n\n```text\nSe alle vores features.\n```\n\nHer slutter eksemplet.",
+      "matches": []
+    },
+    {
+      "text": "# Se alle vores features.",
+      "matches": [
+        "features"
+      ]
+    },
+    {
+      "text": "<!-- vale Agentics.Features = NO -->\nSe alle vores features.\n<!-- vale Agentics.Features = YES -->\n\nSe alle vores features.",
+      "matches": [
+        "features"
+      ]
+    }
+  ]
+}

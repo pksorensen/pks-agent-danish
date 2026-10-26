@@ -1,0 +1,59 @@
+{
+  "id": "Dansk.Interesse",
+  "category": "spelling",
+  "status": "starter",
+  "summary": "Skriv 'interesse' frem for 'interresse'.",
+  "explanation": "Reglen fanger den afgrænsede fejlstavning 'interresse' og foreslår 'interesse'. Den er ikke en fuld stavekontrol og forsøger ikke at gætte andre bøjningsformer.",
+  "source": "https://ro.dsn.dk/",
+  "source_note": "Retskrivningsordbogen: opslag 'interesse'. Reglen og eksemplerne er selvstændigt skrevet; ingen ordbogsdata er kopieret.",
+  "exceptions": [
+    "Citater og omtale af selve fejlstavningen kan undtages lokalt. Egennavne kan kræve en lokal undtagelse."
+  ],
+  "autofix": false,
+  "cases": [
+    {
+      "text": "Hun har interresse for sprog.",
+      "matches": [
+        "interresse"
+      ]
+    },
+    {
+      "text": "Hun har INTERRESSE for sprog.",
+      "matches": [
+        "INTERRESSE"
+      ]
+    },
+    {
+      "text": "Hun har interesse for sprog.",
+      "matches": []
+    },
+    {
+      "text": "Interesserede læsere kan deltage.",
+      "matches": []
+    },
+    {
+      "text": "Brug `interresse` i eksemplet.",
+      "matches": []
+    },
+    {
+      "text": "Et eksempel:\n\n```text\nHun har interresse for sprog.\n```\n\nHer slutter eksemplet.",
+      "matches": []
+    },
+    {
+      "text": "# Hun har interresse for sprog.",
+      "matches": [
+        "interresse"
+      ]
+    },
+    {
+      "text": "<!-- vale Dansk.Interesse = NO -->\nHun har interresse for sprog.\n<!-- vale Dansk.Interesse = YES -->\n\nHun har interresse for sprog.",
+      "matches": [
+        "interresse"
+      ]
+    },
+    {
+      "text": "æinterresseø",
+      "matches": []
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "KlartSprog.FremsenderHermed",
+  "category": "style",
+  "status": "starter",
+  "summary": "Overvej en enklere formulering ved fremsendelse.",
+  "explanation": "I almindelig information kan 'sender' ofte erstatte 'fremsender hermed'. Udtrykket er korrekt dansk og kan være passende i formel korrespondance. Reglen vurderer kun den præcise frase.",
+  "source": "docs/style-decisions.md#klart-sprog",
+  "source_note": "Lokal, dokumenteret stilbeslutning; ikke en officiel retskrivningsregel.",
+  "exceptions": [
+    "Formel eller juridisk korrespondance kan kræve denne stil."
+  ],
+  "autofix": false,
+  "cases": [
+    {
+      "text": "Vi fremsender hermed materialet.",
+      "matches": [
+        "fremsender hermed"
+      ]
+    },
+    {
+      "text": "Vi FREMSENDER HERMED materialet.",
+      "matches": [
+        "FREMSENDER HERMED"
+      ]
+    },
+    {
+      "text": "Vi sender materialet.",
+      "matches": []
+    },
+    {
+      "text": "Vi fremsender materialet i morgen.",
+      "matches": []
+    },
+    {
+      "text": "Brug `fremsender hermed` i eksemplet.",
+      "matches": []
+    },
+    {
+      "text": "Et eksempel:\n\n```text\nVi fremsender hermed materialet.\n```\n\nHer slutter eksemplet.",
+      "matches": []
+    },
+    {
+      "text": "# Vi fremsender hermed materialet.",
+      "matches": [
+        "fremsender hermed"
+      ]
+    },
+    {
+      "text": "<!-- vale KlartSprog.FremsenderHermed = NO -->\nVi fremsender hermed materialet.\n<!-- vale KlartSprog.FremsenderHermed = YES -->\n\nVi fremsender hermed materialet.",
+      "matches": [
+        "fremsender hermed"
+      ]
+    }
+  ]
+}

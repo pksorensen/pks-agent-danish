@@ -1,0 +1,6 @@
+extends: existence
+message: "Overvej 'nu' i stedet for '%s'. Dette er et stilvalg."
+level: warning
+ignorecase: true
+tokens:
+  - "på nuværende tidspunkt"

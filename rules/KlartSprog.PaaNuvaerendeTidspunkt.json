@@ -1,0 +1,55 @@
+{
+  "id": "KlartSprog.PaaNuvaerendeTidspunkt",
+  "category": "style",
+  "status": "starter",
+  "summary": "Overvej 'nu' ved en henvisning til nutiden.",
+  "explanation": "'På nuværende tidspunkt' kan ofte forkortes til 'nu'. Den længere formulering kan dog understrege, at situationen forventes at ændre sig. Dette er et stilforslag.",
+  "source": "docs/style-decisions.md#klart-sprog",
+  "source_note": "Lokal, dokumenteret stilbeslutning; ikke en officiel retskrivningsregel.",
+  "exceptions": [
+    "Bevar formuleringen, når den tidslige afgrænsning er vigtig."
+  ],
+  "autofix": false,
+  "cases": [
+    {
+      "text": "Vi har på nuværende tidspunkt tre pladser.",
+      "matches": [
+        "på nuværende tidspunkt"
+      ]
+    },
+    {
+      "text": "Vi har PÅ NUVÆRENDE TIDSPUNKT tre pladser.",
+      "matches": [
+        "PÅ NUVÆRENDE TIDSPUNKT"
+      ]
+    },
+    {
+      "text": "Vi har nu tre pladser.",
+      "matches": []
+    },
+    {
+      "text": "Vi har endnu ikke valgt et tidspunkt.",
+      "matches": []
+    },
+    {
+      "text": "Brug `på nuværende tidspunkt` i eksemplet.",
+      "matches": []
+    },
+    {
+      "text": "Et eksempel:\n\n```text\nVi har på nuværende tidspunkt tre pladser.\n```\n\nHer slutter eksemplet.",
+      "matches": []
+    },
+    {
+      "text": "# Vi har på nuværende tidspunkt tre pladser.",
+      "matches": [
+        "på nuværende tidspunkt"
+      ]
+    },
+    {
+      "text": "<!-- vale KlartSprog.PaaNuvaerendeTidspunkt = NO -->\nVi har på nuværende tidspunkt tre pladser.\n<!-- vale KlartSprog.PaaNuvaerendeTidspunkt = YES -->\n\nVi har på nuværende tidspunkt tre pladser.",
+      "matches": [
+        "på nuværende tidspunkt"
+      ]
+    }
+  ]
+}

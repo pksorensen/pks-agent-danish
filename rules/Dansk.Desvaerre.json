@@ -1,0 +1,59 @@
+{
+  "id": "Dansk.Desvaerre",
+  "category": "spelling",
+  "status": "starter",
+  "summary": "Skriv 'desværre' frem for 'desvære'.",
+  "explanation": "Reglen fanger den afgrænsede fejlstavning 'desvære' og foreslår 'desværre'. Den er ikke en fuld stavekontrol og forsøger ikke at gætte andre bøjningsformer.",
+  "source": "https://ro.dsn.dk/",
+  "source_note": "Retskrivningsordbogen: opslag 'desværre'. Reglen og eksemplerne er selvstændigt skrevet; ingen ordbogsdata er kopieret.",
+  "exceptions": [
+    "Citater og omtale af selve fejlstavningen kan undtages lokalt. Egennavne kan kræve en lokal undtagelse."
+  ],
+  "autofix": false,
+  "cases": [
+    {
+      "text": "Vi kan desvære ikke komme.",
+      "matches": [
+        "desvære"
+      ]
+    },
+    {
+      "text": "Vi kan DESVÆRE ikke komme.",
+      "matches": [
+        "DESVÆRE"
+      ]
+    },
+    {
+      "text": "Vi kan desværre ikke komme.",
+      "matches": []
+    },
+    {
+      "text": "De svære opgaver tager tid.",
+      "matches": []
+    },
+    {
+      "text": "Brug `desvære` i eksemplet.",
+      "matches": []
+    },
+    {
+      "text": "Et eksempel:\n\n```text\nVi kan desvære ikke komme.\n```\n\nHer slutter eksemplet.",
+      "matches": []
+    },
+    {
+      "text": "# Vi kan desvære ikke komme.",
+      "matches": [
+        "desvære"
+      ]
+    },
+    {
+      "text": "<!-- vale Dansk.Desvaerre = NO -->\nVi kan desvære ikke komme.\n<!-- vale Dansk.Desvaerre = YES -->\n\nVi kan desvære ikke komme.",
+      "matches": [
+        "desvære"
+      ]
+    },
+    {
+      "text": "ædesværeø",
+      "matches": []
+    }
+  ]
+}

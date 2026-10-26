@@ -1,0 +1,27 @@
+{
+  "dansk": {
+    "everyday.md": [],
+    "technical.md": [],
+    "letter.md": []
+  },
+  "klart-sprog": {
+    "everyday.md": [],
+    "technical.md": [],
+    "letter.md": [
+      "KlartSprog.FremsenderHermed",
+      "KlartSprog.MedHenblikPaa",
+      "KlartSprog.PaaNuvaerendeTidspunkt",
+      "KlartSprog.ForetageEnVurdering"
+    ]
+  },
+  "agentics": {
+    "everyday.md": [],
+    "technical.md": ["Agentics.Workflow", "Agentics.Features"],
+    "letter.md": [
+      "KlartSprog.FremsenderHermed",
+      "KlartSprog.MedHenblikPaa",
+      "KlartSprog.PaaNuvaerendeTidspunkt",
+      "KlartSprog.ForetageEnVurdering"
+    ]
+  }
+}

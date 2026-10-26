@@ -1,0 +1,6 @@
+extends: substitution
+message: "Stavefejl: skriv '%s' i stedet for '%s'."
+level: error
+ignorecase: true
+swap:
+  "konkurence": "konkurrence"

@@ -1,0 +1,30 @@
+name: Jeg har prøvet værktøjet
+description: Fortæl om det var nyttigt, støjende eller svært at komme i gang med.
+title: 'Afprøvning: '
+body:
+  - type: textarea
+    id: context
+    attributes:
+      label: Hvad prøvede du det på?
+      description: Fx blogindlæg, mails, dokumentation eller studietekster. Omtrent hvor meget tekst?
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Hvad hjalp, og hvad var irriterende?
+      description: Var forslagene brugbare? Overså vi oplagte fejl? Var installationen besværlig?
+    validations:
+      required: true
+  - type: dropdown
+    id: return
+    attributes:
+      label: Ville du bruge det igen?
+      options:
+        - Ja
+        - Måske, med ændringer
+        - Nej
+  - type: input
+    id: environment
+    attributes:
+      label: Styresystem og Python-version

@@ -1,0 +1,55 @@
+{
+  "id": "Agentics.Workflow",
+  "category": "terminology",
+  "status": "starter",
+  "summary": "Overvej 'arbejdsgang' i dansk kundevendt tekst.",
+  "explanation": "Agentics-profilen foretrækker 'arbejdsgang' frem for 'workflow'. Bøjning og artikel skal vurderes i sammenhæng. Reglen matcher kun grundformen.",
+  "source": "docs/style-decisions.md#agentics",
+  "source_note": "Lokal, dokumenteret stilbeslutning; ikke en officiel retskrivningsregel.",
+  "exceptions": [
+    "Teknisk dokumentation, produktnavne og citater kan beholde ordet."
+  ],
+  "autofix": false,
+  "cases": [
+    {
+      "text": "Vi beskriver et workflow.",
+      "matches": [
+        "workflow"
+      ]
+    },
+    {
+      "text": "Vi beskriver et WORKFLOW.",
+      "matches": [
+        "WORKFLOW"
+      ]
+    },
+    {
+      "text": "Vi beskriver en arbejdsgang.",
+      "matches": []
+    },
+    {
+      "text": "API og status er relevante fagord.",
+      "matches": []
+    },
+    {
+      "text": "Brug `workflow` i eksemplet.",
+      "matches": []
+    },
+    {
+      "text": "Et eksempel:\n\n```text\nVi beskriver et workflow.\n```\n\nHer slutter eksemplet.",
+      "matches": []
+    },
+    {
+      "text": "# Vi beskriver et workflow.",
+      "matches": [
+        "workflow"
+      ]
+    },
+    {
+      "text": "<!-- vale Agentics.Workflow = NO -->\nVi beskriver et workflow.\n<!-- vale Agentics.Workflow = YES -->\n\nVi beskriver et workflow.",
+      "matches": [
+        "workflow"
+      ]
+    }
+  ]
+}

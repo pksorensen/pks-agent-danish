@@ -1,0 +1,55 @@
+{
+  "id": "KlartSprog.ForetageEnVurdering",
+  "category": "style",
+  "status": "starter",
+  "summary": "Overvej et direkte udsagnsord.",
+  "explanation": "'Foretage en vurdering af planen' kan ofte skrives som 'vurdere planen'. En rettelse kræver også at fjerne eller tilpasse præpositionen. Reglen dækker kun infinitivfrasen.",
+  "source": "docs/style-decisions.md#klart-sprog",
+  "source_note": "Lokal, dokumenteret stilbeslutning; ikke en officiel retskrivningsregel.",
+  "exceptions": [
+    "En 'vurdering' kan betegne et særskilt fagligt dokument eller en formel proces."
+  ],
+  "autofix": false,
+  "cases": [
+    {
+      "text": "Vi skal foretage en vurdering af planen.",
+      "matches": [
+        "foretage en vurdering"
+      ]
+    },
+    {
+      "text": "Vi skal FORETAGE EN VURDERING af planen.",
+      "matches": [
+        "FORETAGE EN VURDERING"
+      ]
+    },
+    {
+      "text": "Vi skal vurdere planen.",
+      "matches": []
+    },
+    {
+      "text": "Vi har modtaget en vurdering.",
+      "matches": []
+    },
+    {
+      "text": "Brug `foretage en vurdering` i eksemplet.",
+      "matches": []
+    },
+    {
+      "text": "Et eksempel:\n\n```text\nVi skal foretage en vurdering af planen.\n```\n\nHer slutter eksemplet.",
+      "matches": []
+    },
+    {
+      "text": "# Vi skal foretage en vurdering af planen.",
+      "matches": [
+        "foretage en vurdering"
+      ]
+    },
+    {
+      "text": "<!-- vale KlartSprog.ForetageEnVurdering = NO -->\nVi skal foretage en vurdering af planen.\n<!-- vale KlartSprog.ForetageEnVurdering = YES -->\n\nVi skal foretage en vurdering af planen.",
+      "matches": [
+        "foretage en vurdering"
+      ]
+    }
+  ]
+}

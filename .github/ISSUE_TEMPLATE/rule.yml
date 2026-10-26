@@ -1,0 +1,28 @@
+name: En fejl vi bør fange
+description: Foreslå en regel med fejl og korrekte modeksempler. Kode er valgfrit.
+title: 'Regelforslag: '
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Hvilken fejl skal vi finde?
+      description: Giv en sætning med fejlen og den rettelse, du forventer.
+    validations:
+      required: true
+  - type: textarea
+    id: controls
+    attributes:
+      label: Hvornår skal vi lade teksten være?
+      description: Har du et lignende eksempel, der er korrekt? Er det grammatik, stil eller fagord?
+  - type: textarea
+    id: source
+    attributes:
+      label: Kilde og sammenhæng
+      description: Gerne en sproglig kilde og den genre, du skriver i. Undlad private tekster.
+  - type: checkboxes
+    id: reuse
+    attributes:
+      label: Må vi genbruge eksemplerne?
+      options:
+        - label: Mine eksempler må indgå i projektets offentlige tests under MIT-licensen.

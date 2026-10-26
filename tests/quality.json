@@ -1,0 +1,436 @@
+{
+  "description": "Author-written challenge/regression cases, not independently annotated and not a held-out Danish accuracy benchmark. Broad blog evaluation is reported separately.",
+  "cases": [
+    {
+      "category": "spelling",
+      "text": "Hun havde interresse for kurset.",
+      "findings": [
+        [
+          "Dansk.Interesse",
+          "interresse",
+          "interesse"
+        ]
+      ]
+    },
+    {
+      "category": "spelling",
+      "text": "Han plejedede at komme tidligt.",
+      "findings": [
+        [
+          "Danish.Spelling",
+          "plejedede",
+          "plejede"
+        ]
+      ]
+    },
+    {
+      "category": "spelling",
+      "text": "Det er helt utrodeligt.",
+      "findings": [
+        [
+          "Danish.Spelling",
+          "utrodeligt",
+          "utroligt"
+        ]
+      ]
+    },
+    {
+      "category": "spelling",
+      "text": "Jeg har et abonnoment.",
+      "findings": [
+        [
+          "Dansk.Abonnement",
+          "abonnoment",
+          "abonnement"
+        ]
+      ]
+    },
+    {
+      "category": "finite_verb",
+      "text": "Jeg lære dansk.",
+      "findings": [
+        [
+          "Danish.FiniteVerb",
+          "lære",
+          "lærer"
+        ]
+      ]
+    },
+    {
+      "category": "finite_verb",
+      "text": "Hun reparere cyklen.",
+      "findings": [
+        [
+          "Danish.FiniteVerb",
+          "reparere",
+          "reparerer"
+        ]
+      ]
+    },
+    {
+      "category": "finite_verb",
+      "text": "Vi diskutere planen.",
+      "findings": [
+        [
+          "Danish.FiniteVerb",
+          "diskutere",
+          "diskuterer"
+        ]
+      ]
+    },
+    {
+      "category": "modal",
+      "text": "Jeg kan lærer dansk.",
+      "findings": [
+        [
+          "Danish.AfterModal",
+          "lærer",
+          "lære"
+        ]
+      ]
+    },
+    {
+      "category": "modal",
+      "text": "Hun vil reparerer cyklen.",
+      "findings": [
+        [
+          "Danish.AfterModal",
+          "reparerer",
+          "reparere"
+        ]
+      ]
+    },
+    {
+      "category": "modal",
+      "text": "Vi skal undersøger sagen.",
+      "findings": [
+        [
+          "Danish.AfterModal",
+          "undersøger",
+          "undersøge"
+        ]
+      ]
+    },
+    {
+      "category": "predicate",
+      "text": "Modellerne er dygtig.",
+      "findings": [
+        [
+          "Danish.PredicateAgreement",
+          "dygtig",
+          "dygtige"
+        ]
+      ]
+    },
+    {
+      "category": "predicate",
+      "text": "Børnene er glad.",
+      "findings": [
+        [
+          "Danish.PredicateAgreement",
+          "glad",
+          "glade"
+        ]
+      ]
+    },
+    {
+      "category": "predicate",
+      "text": "Huset er smuk.",
+      "findings": [
+        [
+          "Danish.PredicateAgreement",
+          "smuk",
+          "smukt"
+        ]
+      ]
+    },
+    {
+      "category": "article",
+      "text": "Det er et workshop.",
+      "findings": [
+        [
+          "Danish.ArticleGender",
+          "et",
+          "en"
+        ]
+      ]
+    },
+    {
+      "category": "article",
+      "text": "Vi købte en hus.",
+      "findings": [
+        [
+          "Danish.ArticleGender",
+          "en",
+          "et"
+        ]
+      ]
+    },
+    {
+      "category": "article",
+      "text": "Vi nåede et milepæl.",
+      "findings": [
+        [
+          "Danish.ArticleGender",
+          "et",
+          "en"
+        ]
+      ]
+    },
+    {
+      "category": "adjective",
+      "text": "Vi fik en enormt gevinst.",
+      "findings": [
+        [
+          "Danish.AdjectiveAgreement",
+          "enormt",
+          "enorm"
+        ]
+      ]
+    },
+    {
+      "category": "adjective",
+      "text": "Det er et rigtig produkt.",
+      "findings": [
+        [
+          "Danish.AdjectiveAgreement",
+          "rigtig",
+          "rigtigt"
+        ]
+      ]
+    },
+    {
+      "category": "adjective",
+      "text": "Hun gav et ærlig svar.",
+      "findings": [
+        [
+          "Danish.AdjectiveAgreement",
+          "ærlig",
+          "ærligt"
+        ]
+      ]
+    },
+    {
+      "category": "repetition",
+      "text": "Han har har skrevet brevet.",
+      "findings": [
+        [
+          "Danish.RepeatedWord",
+          "har",
+          null
+        ]
+      ]
+    },
+    {
+      "category": "repetition",
+      "text": "Vi går til til mødet.",
+      "findings": [
+        [
+          "Danish.RepeatedWord",
+          "til",
+          null
+        ]
+      ]
+    },
+    {
+      "category": "verb_control",
+      "text": "Jeg lærer dansk.",
+      "findings": []
+    },
+    {
+      "category": "verb_control",
+      "text": "Jeg vil lære dansk.",
+      "findings": []
+    },
+    {
+      "category": "verb_control",
+      "text": "Kunne jeg bede om hjælp?",
+      "findings": []
+    },
+    {
+      "category": "verb_control",
+      "text": "Det ville jeg stadig være glad for.",
+      "findings": []
+    },
+    {
+      "category": "verb_control",
+      "text": "Hun kan reparere cyklen.",
+      "findings": []
+    },
+    {
+      "category": "verb_control",
+      "text": "Vi skal undersøge sagen.",
+      "findings": []
+    },
+    {
+      "category": "verb_control",
+      "text": "De to værktøjer virker.",
+      "findings": []
+    },
+    {
+      "category": "predicate_control",
+      "text": "Modellerne er dygtige.",
+      "findings": []
+    },
+    {
+      "category": "predicate_control",
+      "text": "De er bedst.",
+      "findings": []
+    },
+    {
+      "category": "predicate_control",
+      "text": "Kaffe er godt.",
+      "findings": []
+    },
+    {
+      "category": "predicate_control",
+      "text": "De er vant til det.",
+      "findings": []
+    },
+    {
+      "category": "predicate_control",
+      "text": "De er klar over problemet.",
+      "findings": []
+    },
+    {
+      "category": "predicate_control",
+      "text": "Opgaver bliver løst.",
+      "findings": []
+    },
+    {
+      "category": "predicate_control",
+      "text": "At løse problemer er svært.",
+      "findings": []
+    },
+    {
+      "category": "predicate_control",
+      "text": "At gøre det for to billeder er nemt.",
+      "findings": []
+    },
+    {
+      "category": "adjective_control",
+      "text": "Vi fik en enorm gevinst.",
+      "findings": []
+    },
+    {
+      "category": "adjective_control",
+      "text": "Det er god reklame.",
+      "findings": []
+    },
+    {
+      "category": "adjective_control",
+      "text": "Hele kæden virker.",
+      "findings": []
+    },
+    {
+      "category": "adjective_control",
+      "text": "Den mest interessante artikel er god.",
+      "findings": []
+    },
+    {
+      "category": "adjective_control",
+      "text": "Det her nye projekt virker.",
+      "findings": []
+    },
+    {
+      "category": "adjective_control",
+      "text": "GLM's færdige rapport ligger klar.",
+      "findings": []
+    },
+    {
+      "category": "adjective_control",
+      "text": "Konsulentens nye produkt virker.",
+      "findings": []
+    },
+    {
+      "category": "adjective_control",
+      "text": "Det er den slags sproglig udvikling, vi ser.",
+      "findings": []
+    },
+    {
+      "category": "adjective_control",
+      "text": "God kørsel kræver øvelse.",
+      "findings": []
+    },
+    {
+      "category": "article_control",
+      "text": "Det er en workshop.",
+      "findings": []
+    },
+    {
+      "category": "article_control",
+      "text": "Det lød godt.",
+      "findings": []
+    },
+    {
+      "category": "article_control",
+      "text": "Var det nostalgi?",
+      "findings": []
+    },
+    {
+      "category": "article_control",
+      "text": "Det er et computer vision-projekt.",
+      "findings": []
+    },
+    {
+      "category": "article_control",
+      "text": "Der var en A/B-test.",
+      "findings": []
+    },
+    {
+      "category": "repetition_control",
+      "text": "Han har taget taget af skuret.",
+      "findings": []
+    },
+    {
+      "category": "repetition_control",
+      "text": "Så så han huset.",
+      "findings": []
+    },
+    {
+      "category": "repetition_control",
+      "text": "Dengang troede jeg jeg kunne gøre det.",
+      "findings": []
+    },
+    {
+      "category": "repetition_control",
+      "text": "Vi ved ved nærmere eftertanke godt, hvem det var.",
+      "findings": []
+    },
+    {
+      "category": "english_control",
+      "text": "> Features in this version are working correctly.",
+      "findings": []
+    },
+    {
+      "category": "code_control",
+      "text": "```sessionstory\n{\"text\":\"Jeg lære dansk. Han plejedede at komme.\"}\n```\n\nAlt er i orden.",
+      "findings": []
+    },
+    {
+      "category": "code_control",
+      "text": "Eksemplet er `Jeg lære dansk`.",
+      "findings": []
+    },
+    {
+      "category": "spelling_control",
+      "text": "Hun havde interesse for kurset.",
+      "findings": []
+    },
+    {
+      "category": "spelling_control",
+      "text": "Han plejede at komme tidligt.",
+      "findings": []
+    },
+    {
+      "category": "spelling_control",
+      "text": "Det er helt utroligt.",
+      "findings": []
+    },
+    {
+      "category": "spelling_control",
+      "text": "Jeg har et abonnement.",
+      "findings": []
+    }
+  ]
+}

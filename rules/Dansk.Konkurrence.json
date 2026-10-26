@@ -1,0 +1,59 @@
+{
+  "id": "Dansk.Konkurrence",
+  "category": "spelling",
+  "status": "starter",
+  "summary": "Skriv 'konkurrence' frem for 'konkurence'.",
+  "explanation": "Reglen fanger den afgrænsede fejlstavning 'konkurence' og foreslår 'konkurrence'. Den er ikke en fuld stavekontrol og forsøger ikke at gætte andre bøjningsformer.",
+  "source": "https://ro.dsn.dk/",
+  "source_note": "Retskrivningsordbogen: opslag 'konkurrence'. Reglen og eksemplerne er selvstændigt skrevet; ingen ordbogsdata er kopieret.",
+  "exceptions": [
+    "Citater og omtale af selve fejlstavningen kan undtages lokalt. Egennavne kan kræve en lokal undtagelse."
+  ],
+  "autofix": false,
+  "cases": [
+    {
+      "text": "Vi udskriver en konkurence.",
+      "matches": [
+        "konkurence"
+      ]
+    },
+    {
+      "text": "Vi udskriver en KONKURENCE.",
+      "matches": [
+        "KONKURENCE"
+      ]
+    },
+    {
+      "text": "Vi udskriver en konkurrence.",
+      "matches": []
+    },
+    {
+      "text": "Der er flere konkurrenter.",
+      "matches": []
+    },
+    {
+      "text": "Brug `konkurence` i eksemplet.",
+      "matches": []
+    },
+    {
+      "text": "Et eksempel:\n\n```text\nVi udskriver en konkurence.\n```\n\nHer slutter eksemplet.",
+      "matches": []
+    },
+    {
+      "text": "# Vi udskriver en konkurence.",
+      "matches": [
+        "konkurence"
+      ]
+    },
+    {
+      "text": "<!-- vale Dansk.Konkurrence = NO -->\nVi udskriver en konkurence.\n<!-- vale Dansk.Konkurrence = YES -->\n\nVi udskriver en konkurence.",
+      "matches": [
+        "konkurence"
+      ]
+    },
+    {
+      "text": "ækonkurenceø",
+      "matches": []
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Hunspell
+        run: sudo apt-get update && sudo apt-get install -y libhunspell-1.7-0
+      - name: Install pinned runtime, model and dictionaries
+        run: python3 scripts/setup.py
+      - name: Check rules, grammar, source positions and CLI
+        run: python3 scripts/test.py
+      - name: Check generated rule documentation
+        run: python3 scripts/catalog.py --check
+      - name: Smoke-test the public entry point
+        run: |
+          bin/danish lint --format json tests/corpus/everyday.md
+          bin/danish explain Danish.PredicateAgreement
